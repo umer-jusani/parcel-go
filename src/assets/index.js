@@ -1,0 +1,105 @@
+"use client"
+// import from local
+import Logo from "./images/primary-logo.png"
+import LogoWhite from "./images/logo-white.png"
+import TikTok from "./images/SmartSend_graphicmobile_.webp"
+import Star from "./images/star.webp"
+import USA from "./images/America.webp"
+import SignIn from "./images/Trust.webp"
+import Parcel from "./images/woman_on_telephone.webp"
+import World from "./images/tracking_graphic.webp"
+import Delivery from "./images/fast_delivery_graphic.webp"
+import UK from "./images/uk.svg"
+import Ireland from "./images/Ireland.svg"
+import Apple from "./images/apple.png"
+import GooglePlay from "./images/google_play.png"
+import NearestLocation from "./images/nearest_location.webp"
+import FedEx from "./images/fedex.webp"
+import FedExAbout from "./images/fedex-about.webp"
+import FedexTracking from "./images/fedex-free-tracking.webp"
+import FedexSustainableShipping from "./images/fedex-sustainable-shipping.webp"
+import FedexCourierFaqs from "./images/fedex_courier_faqs.webp"
+import FedExStock from "./images/fedex-stock.webp"
+import FedExWeightMeasure from "./images/fedex-weight-measure.webp"
+import FedExCheckList from "./images/fedex-checklist.webp"
+
+// FedEx inner slider cards
+const FedexInnerCards = [
+    {
+        title: "What are the size restrictions of the Parcel2go.com services?",
+        image: typeof FedExCheckList === 'object' ? FedExCheckList : { src: FedExCheckList },
+        href: "#",
+    },
+    {
+        title: "How to Make Your Shipping More Sustainable",
+        image: typeof FedexSustainableShipping === 'object' ? FedexSustainableShipping : { src: FedexSustainableShipping },
+        href: "#",
+    },
+    {
+        title: "FedEx Express Courier FAQs",
+        image: typeof FedexCourierFaqs === 'object' ? FedexCourierFaqs : { src: FedexCourierFaqs },
+        href: "#",
+    },
+    {
+        title: "What’s the Best Way to Send a Large or Heavy Parcel?",
+        image: typeof FedExStock === 'object' ? FedExStock : { src: FedExStock },
+        href: "#",
+    },
+    {
+        title: "How to Weigh and Measure a Parcel",
+        image: typeof FedExWeightMeasure === 'object' ? FedExWeightMeasure : { src: FedExWeightMeasure },
+        href: "#",
+    }
+]
+
+
+export { Logo, LogoWhite, TikTok, Star, USA, SignIn, Parcel, World, Delivery, UK, Ireland, Apple, GooglePlay, NearestLocation, FedEx, FedExAbout, FedexTracking, FedexSustainableShipping, FedexCourierFaqs, FedExStock, FedExWeightMeasure, FedExCheckList, FedexInnerCards }
+
+
+// import from material ui icons
+import AddIcon from '@mui/icons-material/Add'
+import AttachFileIcon from '@mui/icons-material/AttachFile'
+import DollarIcon from '@mui/icons-material/AttachMoneyOutlined'
+import ChatIcon from '@mui/icons-material/Chat'
+import CloseIcon from '@mui/icons-material/Close'
+import DashboardIcon from '@mui/icons-material/Dashboard'
+import DeleteIcon from '@mui/icons-material/Delete'
+import DescriptionIcon from '@mui/icons-material/Description'
+import DoneAllIcon from '@mui/icons-material/DoneAll'
+import EditIcon from '@mui/icons-material/Edit'
+import GavelIcon from '@mui/icons-material/Gavel'
+import InventoryIcon from '@mui/icons-material/Inventory'
+import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined'
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks'
+import TransportIcon from '@mui/icons-material/LocalShipping'
+import LogoutIcon from '@mui/icons-material/Logout'
+import MenuIcon from '@mui/icons-material/Menu'
+import NotificationsIcon from '@mui/icons-material/Notifications'
+import PaidIcon from '@mui/icons-material/Paid'
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye'
+import HistoryIcon from '@mui/icons-material/RestorePage'
+import SearchIcon from '@mui/icons-material/Search'
+import SettingsIcon from '@mui/icons-material/Settings'
+import StarBorderIcon from '@mui/icons-material/StarBorder'
+import VisibilityIcon from '@mui/icons-material/Visibility'
+import WorkIcon from '@mui/icons-material/Work'
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz'
+import SchoolIcon from '@mui/icons-material/School'
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket'
+import Person2Icon from '@mui/icons-material/Person2'
+import FacebookIcon from '@mui/icons-material/FacebookOutlined';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+
+
+export {
+    AddIcon, AttachFileIcon, ChatIcon, CloseIcon, DashboardIcon, DeleteIcon, DescriptionIcon, DollarIcon, DoneAllIcon, EditIcon, GavelIcon, HistoryIcon, Inventory2OutlinedIcon, InventoryIcon, LibraryBooksIcon, LogoutIcon, MenuIcon,
+    MoreHorizIcon, NotificationsIcon, PaidIcon, Person2Icon, RemoveRedEyeIcon, SchoolIcon, SearchIcon, SettingsIcon, ShoppingBasketIcon, StarBorderIcon, TransportIcon, VisibilityIcon,
+    WorkIcon,
+    FacebookIcon,
+    YouTubeIcon,
+    LinkedInIcon,
+    TwitterIcon
+}
+
