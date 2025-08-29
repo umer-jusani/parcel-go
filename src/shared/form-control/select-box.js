@@ -105,7 +105,7 @@ export default function SelectBox({
           <InputLabel
             id={rand}
             sx={{
-              backgroundColor: 'background.default',
+              backgroundColor: 'background.white',
               color: 'GrayText',
               px: 0,
             }}
