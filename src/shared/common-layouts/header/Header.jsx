@@ -12,7 +12,15 @@ import PersonAdd from '@mui/icons-material/PersonAdd'
 import Settings from '@mui/icons-material/Settings'
 import Logout from '@mui/icons-material/Logout'
 
-const navItems = ['Smart Send', 'Get a Quote', 'Services', "Track a Parcel", "Bussiness", "Help", "cart"]
+const navItems = [
+  { label: 'Smart Send', link: '/smart-send' },
+  { label: 'Get a Quote', link: '/quick-quote' },
+  { label: 'Services', link: '/services' },
+  { label: 'Track a Parcel', link: '/home/track' },
+  { label: 'Bussiness', link: '/home/business' },
+  { label: 'Help', link: '/home/help' },
+  { label: 'cart', link: '/cart' }
+]
 
 const Header = () => {
   // const matches = useMediaQuery(DRAWER_BREAK_POINT);
@@ -29,7 +37,7 @@ const Header = () => {
         sx={{ backgroundColor: 'background.white', py: 1 }}
         elevation={1}
       >
-        <ToolbarStyled >
+        <ToolbarStyled>
           <Container maxWidth="xl">
             <Stack direction="row" spacing={2} alignItems="center" justifyContent="space-between">
               <Image src={Logo} alt="logo" width={130} objectFit='contain' />
@@ -37,41 +45,39 @@ const Header = () => {
               {/* Navigation Items */}
               <List sx={{ display: 'flex', gap: 0 }}>
                 {navItems.map((item) => (
-                  item === "cart" ? (
-                    <ListItem key={item} disablePadding>
-                      <ListItemButton sx={{ textAlign: 'center' }}>
+                  item.label === 'cart' ? (
+                    <ListItem key={item.label} disablePadding>
+                      <ListItemButton sx={{ textAlign: 'center' }} onClick={() => router.push(item.link)}>
                         <ShoppingBasketIcon sx={{ color: 'text.primary' }} />
                       </ListItemButton>
                     </ListItem>
-                  ) : item === "Services" ? (
-                    <>
-                      <ListItem
-                        key={item}
-                        disablePadding
-                        sx={{ position: 'relative', "&:hover #services-dropdown": { display: 'flex' } }}
-                        onMouseEnter={() => {
-                          console.log('mouse enter')
-                          const dropdown = document.getElementById('services-dropdown')
-                          const overlay = document.getElementById('services-overlay')
-                          dropdown.style.display = 'flex'
-                          overlay.style.display = 'block'
-                        }}
+                  ) : item.label === 'Services' ? (
+                    <ListItem
+                      key={item.label}
+                      disablePadding
+                      sx={{ position: 'relative', "&:hover #services-dropdown": { display: 'flex' } }}
+                      onMouseEnter={() => {
+                        console.log('mouse enter')
+                        const dropdown = document.getElementById('services-dropdown')
+                        const overlay = document.getElementById('services-overlay')
+                        dropdown.style.display = 'flex'
+                        overlay.style.display = 'block'
+                      }}
+                    >
+                      <ListItemButton
+                        sx={{ textAlign: 'center' }}
+                        onClick={() => router.push(item.link)}
                       >
-                        <ListItemButton
-                          sx={{ textAlign: 'center' }}
-                        >
-                          <Typography variant="body1" sx={{ fontWeight: 'bold', color: 'text.primary', textWrap: 'nowrap' }}>
-                            {item}
-                          </Typography>
-                        </ListItemButton>
-                      </ListItem>
-
-                    </>
-                  ) : (
-                    <ListItem key={item} disablePadding>
-                      <ListItemButton sx={{ textAlign: 'center' }}>
                         <Typography variant="body1" sx={{ fontWeight: 'bold', color: 'text.primary', textWrap: 'nowrap' }}>
-                          {item}
+                          {item.label}
+                        </Typography>
+                      </ListItemButton>
+                    </ListItem>
+                  ) : (
+                    <ListItem key={item.label} disablePadding>
+                      <ListItemButton sx={{ textAlign: 'center' }} onClick={() => router.push(item.link)}>
+                        <Typography variant="body1" sx={{ fontWeight: 'bold', color: 'text.primary', textWrap: 'nowrap' }}>
+                          {item.label}
                         </Typography>
                       </ListItemButton>
                     </ListItem>

@@ -37,23 +37,36 @@ export const ToolbarStyled = styled(Toolbar)(({ theme }) => ({
 }))
 
 export const StyledTableContainer = styled(TContainer)(({ theme }) => ({
-  // ".MuiTableCell-root": { textAlign: "left" },
-  '& tbody tr:nth-of-type(odd)': {
-    backgroundColor: theme.palette.background.default,
+  // Ensure body rows remain white
+  '& tbody tr': {
+    backgroundColor: 'white',
   },
 }))
 
-export const StyledTable = styled(Table)({
-  // "& .MuiTableCell-root": {
-  //     textAlign: "center"
-  // },
-})
+export const StyledTable = styled(Table)(({ theme }) => ({
+  '& tbody td': {
+    borderBottom: `1px solid ${theme.palette.border}`,
+  },
+  '& thead th': {
+    borderBottom: 0,
+  },
+}))
 
 export const StyledTableRow = styled(TableRow)(({ theme }) => ({
   boxShadow: '0px 6px 43px -20px rgba(0,0,0,0.3)',
   background: 'white !important',
   transition: '0.5s',
-  cursor: "pointer"
+  cursor: "pointer",
+  border: `1px solid ${theme.palette.border} !important`,
+}))
+
+export const StyledTableHead = styled(TableHead)(({ theme }) => ({
+  // backgroundColor: '#E9F4FB',
+  backgroundColor: '#E9F4FB',
+  border: `1px solid ${theme.palette.border} !important`,
+  '& th': {
+    padding: '10px',
+  },
 }))
 
 export const StyledPaginationBox = styled(Box)({

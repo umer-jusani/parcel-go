@@ -9,7 +9,7 @@ const inter = Inter({
 const roboto = Roboto({
   subsets: ['latin'],
   weight: ['400', '500', '700', '900'],
-  display:'swap',
+  display: 'swap',
 })
 
 let theme = createTheme({
@@ -99,6 +99,7 @@ let theme = createTheme({
       "200": '#000032',
     },
     divider: 'rgba(232, 232, 232, 1)',
+    border: '#baccd6',
   },
 })
 

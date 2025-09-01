@@ -11,6 +11,7 @@ import {
   StyledPaginationBox,
   StyledTable,
   StyledTableContainer,
+  StyledTableHead,
   StyledTableRow,
 } from './ui'
 
@@ -36,9 +37,9 @@ function TableContainer({
     <>
       <StyledTableContainer>
         <StyledTable sx={tableStyle} {...props}>
-          <TableHead>
-            <StyledTableRow>{thContent}</StyledTableRow>
-          </TableHead>
+          <StyledTableHead>
+            <TableRow>{thContent}</TableRow>
+          </StyledTableHead>
           <TableBody>
             {isLoading ? (
               <TableRow
