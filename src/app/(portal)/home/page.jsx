@@ -1,6 +1,6 @@
 import { Delivery, Parcel, SignIn, Star, TikTok, USA, World } from '@/assets'
 import Faqs from '@/shared/common-layouts/faqs/faqs'
-import { FLOW_SPACER } from '@/shared/constant/constant'
+import { faqsHome, FLOW_SPACER } from '@/shared/constant/constant'
 import theme from '@/shared/hoc/theme/theme'
 import { Box, Button, Card, CardContent, Container, Divider, Grid, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
@@ -603,7 +603,7 @@ const Home = () => {
       </Container>
 
       {/* Faqs Section */}
-      <Faqs />
+      <Faqs faqa={faqsHome} />
     </>
   )
 }
