@@ -27,6 +27,7 @@ export default function SelectBox({
   handleChange = () => {},
   disabled = false,
   control = null,
+  labelBgColor = 'background.white',
   ...props
 }) {
   const [selected, setSelected] = useState(initValue)
@@ -58,7 +59,7 @@ export default function SelectBox({
         onChange(e)
       }}
       value={value}
-      sx={{ ...sx, backgroundColor: 'white' }}
+      sx={{ ...sx, backgroundColor: 'background.white' }}
       name={name}
       required={required}
       error={Boolean(error)}
@@ -105,7 +106,7 @@ export default function SelectBox({
           <InputLabel
             id={rand}
             sx={{
-              backgroundColor: 'background.white',
+              backgroundColor: labelBgColor,
               color: 'GrayText',
               px: 0,
             }}

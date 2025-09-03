@@ -1,5 +1,6 @@
-import { Delivery, Parcel, SignIn, Star, TikTok, USA, World } from '@/assets'
+import { Delivery, Duck, GetAQuote, Parcel, SignIn, Star, TikTok, USA, World } from '@/assets'
 import Faqs from '@/shared/common-layouts/faqs/faqs'
+import HomeBanner from '@/shared/components/banner/home-banner'
 import { faqsHome, FLOW_SPACER } from '@/shared/constant/constant'
 import theme from '@/shared/hoc/theme/theme'
 import { Box, Button, Card, CardContent, Container, Divider, Grid, Stack, Typography } from '@mui/material'
@@ -87,6 +88,12 @@ const Home = () => {
           }}
         />
       </Box>
+
+      <HomeBanner
+        title="Compare the Cheapest Parcel Delivery Prices*"
+        description="Send from only £2.39 (£1.99 exc VAT)"
+        image={Duck}
+      />
 
 
       {/* Comparing Prices */}

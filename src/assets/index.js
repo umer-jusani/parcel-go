@@ -27,6 +27,8 @@ import Coins from "./images/coins.webp"
 import SmartSend from "./images/smart_send.webp"
 import BussinessAccount from "./images/bussiness_account.webp"
 import SmartSend2 from "./images/smart_send2.webp"
+import Duck from "./images/duck.webp"
+
 
 
 // FedEx inner slider cards
@@ -59,7 +61,7 @@ const FedexInnerCards = [
 ]
 
 
-export { Logo, LogoWhite, TikTok, Star, USA, SignIn, Parcel, World, Delivery, UK, Ireland, Apple, GooglePlay, NearestLocation, FedEx, FedExAbout, FedexTracking, FedexSustainableShipping, FedexCourierFaqs, FedExStock, FedExWeightMeasure, FedExCheckList, FedexInnerCards, GetAQuote, Coins, SmartSend, BussinessAccount, SmartSend2 }
+export { Logo, LogoWhite, TikTok, Star, USA, SignIn, Parcel, World, Delivery, UK, Ireland, Apple, GooglePlay, NearestLocation, FedEx, FedExAbout, FedexTracking, FedexSustainableShipping, FedexCourierFaqs, FedExStock, FedExWeightMeasure, FedExCheckList, FedexInnerCards, GetAQuote, Coins, SmartSend, BussinessAccount, SmartSend2, Duck }
 
 
 // import from material ui icons

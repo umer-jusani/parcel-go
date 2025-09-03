@@ -1,10 +1,19 @@
 "use client";
 
-import { BussinessAccount, Coins, GetAQuote, SmartSend, SmartSend2, Star, TikTok } from "@/assets";
+import {
+  BussinessAccount,
+  Coins,
+  GetAQuote,
+  SmartSend,
+  SmartSend2,
+  Star,
+  TikTok,
+} from "@/assets";
 import Faqs from "@/shared/common-layouts/faqs/faqs";
 import Calculator from "@/shared/components/calculator/calculator";
+import DynamicBanner from "@/shared/components/banner/dynamic-banner";
 import { faqsQuickQuote, FLOW_SPACER } from "@/shared/constant/constant";
-import theme from '@/shared/hoc/theme/theme';
+import theme from "@/shared/hoc/theme/theme";
 import TableContainer from "@/shared/pure-components/table/TableContainer";
 import { StyledTableRow } from "@/shared/pure-components/table/ui";
 import {
@@ -96,47 +105,12 @@ const page = () => {
   return (
     <>
       {/* Banner Section */}
-      <Stack bgcolor={"background.white"} py={7}>
-        <Container maxWidth={"lg"}>
-          <Stack
-            direction={"row"}
-            alignItems={"center"}
-            justifyContent={"space-between"}
-            spacing={FLOW_SPACER}
-          >
-            {/* ImAage */}
-            <Image
-              src={GetAQuote}
-              alt="Get a Quote"
-              width={250}
-              height={"auto"}
-              objectFit="cover"
-            />
-            {/* Title */}
-            <Stack textAlign={"center"} spacing={2}>
-              <Typography variant="h3" fontWeight={"bold"}>
-                Get a Quote
-              </Typography>
-              <Typography variant="h4" fontWeight={"medium"}>
-                Postage Costs from just £1.99 exc VAT
-              </Typography>
-            </Stack>
-            {/* ImAage */}
-            <Image
-              src={GetAQuote}
-              alt="Get a Quote"
-              width={250}
-              height={"auto"}
-              objectFit="cover"
-            />
-          </Stack>
-
-          {/* Calculator */}
-          <Container maxWidth={"lg"}>
-            <Calculator />
-          </Container>
-        </Container>
-      </Stack>
+      <DynamicBanner
+        title="Get a Quote"
+        description="Postage Costs from just £1.99 exc VAT"
+        image1={GetAQuote}
+        image2={GetAQuote}
+      />
 
       {/* Cards Section */}
       <Container maxWidth="xl" sx={{ py: 8 }}>
@@ -258,7 +232,8 @@ const page = () => {
                   Integrate With Smart Send
                 </Typography>
                 <Typography variant="body1" sx={{ mb: 3 }}>
-                  Link your sales channels with our free shipping management tool to ship all your orders from one place.
+                  Link your sales channels with our free shipping management
+                  tool to ship all your orders from one place.
                 </Typography>
                 <Box sx={{ mt: 2 }}>
                   <Image
@@ -309,7 +284,8 @@ const page = () => {
                   Open a Business Account
                 </Typography>
                 <Typography variant="body1" sx={{ mb: 3 }}>
-                  Save up to 42% on collection services When you sign up for a Parcel2Go Business Account
+                  Save up to 42% on collection services When you sign up for a
+                  Parcel2Go Business Account
                 </Typography>
                 <Box sx={{ mt: 2 }}>
                   <Image
