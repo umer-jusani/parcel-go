@@ -238,6 +238,7 @@ const ServicesMenu = ({ anchorEl, open, onClose }) => {
                       onClick={() => handleMenuItemClick("/services/couriers")}
                       sx={{
                         p: 0,
+                        py: 0,
                         minHeight: "auto",
                         "&:hover": {
                           backgroundColor: "rgba(46, 91, 138, 0.04)",
@@ -250,7 +251,6 @@ const ServicesMenu = ({ anchorEl, open, onClose }) => {
                           display: "flex",
                           alignItems: "center",
                           width: "100%",
-                          py: 0.5,
                         }}
                       >
                         <Typography
@@ -331,6 +331,7 @@ const ServicesMenu = ({ anchorEl, open, onClose }) => {
                       }
                       sx={{
                         p: 0,
+                        py: 0,
                         minHeight: "auto",
                         "&:hover": {
                           backgroundColor: "rgba(46, 91, 138, 0.04)",
@@ -391,6 +392,7 @@ const ServicesMenu = ({ anchorEl, open, onClose }) => {
                       }
                       sx={{
                         p: 0,
+                        py: 0,
                         minHeight: "auto",
                         "&:hover": {
                           backgroundColor: "rgba(46, 91, 138, 0.04)",
@@ -403,7 +405,6 @@ const ServicesMenu = ({ anchorEl, open, onClose }) => {
                           display: "flex",
                           alignItems: "center",
                           width: "100%",
-                          py: 0.5,
                         }}
                       >
                         <Typography
@@ -476,6 +477,7 @@ const ServicesMenu = ({ anchorEl, open, onClose }) => {
                       onClick={() => handleMenuItemClick("/services/tools")}
                       sx={{
                         p: 0,
+                        py: 0,
                         minHeight: "auto",
                         "&:hover": {
                           backgroundColor: "rgba(46, 91, 138, 0.04)",
