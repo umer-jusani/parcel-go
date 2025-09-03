@@ -68,7 +68,7 @@ let theme = createTheme({
     mode: 'light',
     primary: {
       main: '#038e00',
-      light: '#27ce5a',
+      light: '#27ce5a'
     },
     secondary: {
       main: '#0254ad',

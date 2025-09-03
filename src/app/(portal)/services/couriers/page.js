@@ -219,7 +219,7 @@ const Couriers = () => {
                             </Typography>
 
                             <Typography variant="body1" sx={{ color: theme.palette.text.secondary }}>
-                                The FedEx Express delivery service was founded as "Federal Express" in 1971 in a small town in Arkansas, United States. From there FedEx Express has grown consistently and now has over 280,000 employees.
+                                The FedEx Express delivery service was founded as &quot;Federal Express&quot; in 1971 in a small town in Arkansas, United States. From there FedEx Express has grown consistently and now has over 280,000 employees.
                             </Typography>
 
                             <Typography variant="body1" sx={{ color: theme.palette.text.secondary }}>
