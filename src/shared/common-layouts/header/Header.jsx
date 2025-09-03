@@ -2,24 +2,23 @@
 import { Logo, ShoppingBasketIcon } from "@/assets";
 import {
   Box,
-  Button,
   Container,
   Grid,
   List,
   ListItem,
   ListItemButton,
-  Stack,
-  Typography,
   Menu,
   MenuItem,
   Paper,
+  Stack,
+  Typography
 } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Profile from "./Profile";
 import { AppBarStyled, ToolbarStyled } from "./ui";
-import { useState } from "react";
 
 const navItems = [
   { label: "Smart Send", link: "/smart-send" },
@@ -172,6 +171,7 @@ const ServicesMenu = ({ anchorEl, open, onClose }) => {
           sx: {
             width: "100vw",
             maxWidth: "100vw",
+            // backgroundColor: "background.white",
             left: "0 !important",
             right: "0 !important",
             transform: "none !important",
@@ -187,7 +187,7 @@ const ServicesMenu = ({ anchorEl, open, onClose }) => {
       transformOrigin={{ horizontal: "left", vertical: "top" }}
       anchorOrigin={{ horizontal: "left", vertical: "bottom" }}
     >
-      <Paper sx={{ width: "100%", p: 0 }}>
+      <Paper sx={{ width: "100%", p: 0, backgroundColor: "background.white" }}>
         <Container maxWidth="xl" sx={{ py: 4, px: 2 }}>
           <Grid container spacing={4}>
             {/* Range of Couriers */}
