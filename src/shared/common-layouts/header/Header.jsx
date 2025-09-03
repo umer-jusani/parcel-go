@@ -11,7 +11,7 @@ import {
   MenuItem,
   Paper,
   Stack,
-  Typography
+  Typography,
 } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -64,7 +64,14 @@ const Header = () => {
               alignItems="center"
               justifyContent="space-between"
             >
-              <Image src={Logo} alt="logo" width={130} objectFit="contain" />
+              <Image
+                src={Logo}
+                style={{ cursor: "pointer" }}
+                alt="logo"
+                width={130}
+                objectFit="contain"
+                onClick={() => router.push("/home")}
+              />
 
               {/* Navigation Items */}
               <List sx={{ display: "flex", gap: 0 }}>
