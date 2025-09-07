@@ -18,6 +18,7 @@ import {
   WhatSmartSend,
   WhySmartSend,
   SaveOn,
+  Star,
   Amazon,
   BigCommerce,
   BluePark,
@@ -33,10 +34,17 @@ import {
   Tiktok,
   Wix,
   WooCommerce,
+  DYDynamo,
+  MarketplaceMultitask,
+  SavvySide,
 } from "@/assets";
 import Image from "next/image";
 import UIButton from "@/shared/pure-components/button/button";
 import InputField from "@/shared/form-control/InputField";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
 
 const SmartSend = () => {
   const theme = useTheme();
@@ -47,6 +55,30 @@ const SmartSend = () => {
     "Link an Account",
     "Smart Send Features",
     "Customer Reviews",
+  ];
+
+  const customerStories = [
+    {
+      title: "Savvy Side Hustler",
+      description:
+        "Sarah told us how she sells her camera equipment both nationally and internationally with the help of Parcel2Go.",
+      image: SavvySide,
+      href: "#",
+    },
+    {
+      title: "DIY Dynamo",
+      description:
+        "Mike explains how Smart Send helps him ship his handmade bee hotels and gives tips on how to use the platform efficiently.",
+      image: DYDynamo,
+      href: "#",
+    },
+    {
+      title: "Marketplace Multitasker",
+      description:
+        "Dimitar manages a self-care business on Amazon, Etsy, NOTHS, and Shopify. We look at how Smart Send makes multichannel management even easier.",
+      image: MarketplaceMultitask,
+      href: "#",
+    },
   ];
 
   return (
@@ -1482,6 +1514,110 @@ const SmartSend = () => {
             </Paper>
           </Stack>
 
+          {/* Customer Stories Slider Section */}
+          <Stack spacing={4} alignItems="center" sx={{ width: "100%" }}>
+            <Container maxWidth="lg" sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
+              <Swiper
+                style={{ width: "100%", maxWidth: "1200px" }}
+                slidesPerView={1}
+                spaceBetween={30}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                  },
+                }}
+              >
+                {customerStories.map((story, index) => (
+                  <SwiperSlide key={index}>
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        borderRadius: 3,
+                        overflow: "hidden",
+                        border: `2px solid #E0E0E0`,
+                        backgroundColor: "white",
+                        height: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          width: "100%",
+                          height: 200,
+                          position: "relative",
+                          overflow: "hidden",
+                        }}
+                      >
+                        <Image
+                          src={story.image}
+                          alt={story.title}
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                          }}
+                        />
+                      </Box>
+                      <Box
+                        sx={{
+                          p: 3,
+                          flex: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                          textAlign: "center",
+                        }}
+                      >
+                        <Typography
+                          variant="h6"
+                          sx={{
+                            fontWeight: 700,
+                            color: "#1E3A8A",
+                            mb: 2,
+                            lineHeight: 1.3,
+                          }}
+                        >
+                          {story.title}
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            color: "text.primary",
+                            lineHeight: 1.6,
+                            height: "80px",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            mb: 2,
+                          }}
+                        >
+                          {story.description}
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            color: "#1E3A8A",
+                            fontWeight: 600,
+                            cursor: "pointer",
+                            "&:hover": {
+                              textDecoration: "underline",
+                            },
+                          }}
+                        >
+                          Read more &gt;
+                        </Typography>
+                      </Box>
+                    </Paper>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </Container>
+          </Stack>
 
           {/* Save up to 13% on shipping rates section */}
           <Paper
@@ -1516,7 +1652,7 @@ const SmartSend = () => {
                     style={{
                       width: "100%",
                       height: "auto",
-                    //   maxWidth: "500px",
+                      //   maxWidth: "500px",
                       objectFit: "contain",
                     }}
                   />
@@ -1556,7 +1692,8 @@ const SmartSend = () => {
                         color: "text.primary",
                       }}
                     >
-                      Parcel2Go prioritises affordable shipping costs, and Smart Send is even cheaper.
+                      Parcel2Go prioritises affordable shipping costs, and Smart
+                      Send is even cheaper.
                     </Typography>
 
                     <Typography
@@ -1596,13 +1733,14 @@ const SmartSend = () => {
 
                     <Typography
                       variant="body2"
-                      sx={{ 
+                      sx={{
                         lineHeight: 1.6,
                         color: "text.primary",
                         fontWeight: 500,
                       }}
                     >
-                      Save up to 13% on courier costs as standard, and enjoy regular promotional discounts exclusive to Smart Send.
+                      Save up to 13% on courier costs as standard, and enjoy
+                      regular promotional discounts exclusive to Smart Send.
                     </Typography>
 
                     <Box sx={{ mt: 3 }}>
@@ -1620,6 +1758,102 @@ const SmartSend = () => {
                       </UIButton>
                     </Box>
                   </Stack>
+                </Box>
+              </Grid>
+            </Grid>
+          </Paper>
+
+          {/* Customer Reviews Section */}
+          <Paper
+            elevation={0}
+            sx={{
+              backgroundColor: "#374151",
+              borderRadius: 3,
+              border: `2px solid #4B5563`,
+              overflow: "hidden",
+              mx: "auto",
+              width: "100%",
+            }}
+          >
+            <Grid container spacing={0}>
+              {/* Left Column - Review Content */}
+              <Grid item xs={12} md={8}>
+                <Box
+                  sx={{
+                    backgroundColor: "#374151",
+                    height: "100%",
+                    p: { xs: 4, md: 6 },
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    color: "white",
+                  }}
+                >
+                  <Typography
+                    variant="h3"
+                    fontWeight="bold"
+                    sx={{
+                      mb: 3,
+                      color: "white",
+                      fontSize: { xs: "1.8rem", md: "2.2rem" },
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    Over 100,000 5 star reviews
+                  </Typography>
+
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      fontSize: "1.1rem",
+                      lineHeight: 1.6,
+                      color: "white",
+                      mb: 2,
+                    }}
+                  >
+                    "The efficiency of Parcel2Go has surpassed my expectations.
+                    I have sent over 50 parcels in the last month and have been
+                    kept up to date every step of the way from posting to
+                    delivery. I have to say they are a very impressive company
+                    to deal with and all parcels have been delivered promptly."
+                  </Typography>
+
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      fontSize: "1rem",
+                      color: "#D1D5DB",
+                      fontWeight: 500,
+                    }}
+                  >
+                    - Helen Rankin
+                  </Typography>
+                </Box>
+              </Grid>
+
+              {/* Right Column - Star Graphic */}
+              <Grid item xs={12} md={4}>
+                <Box
+                  sx={{
+                    backgroundColor: "#374151",
+                    height: "100%",
+                    minHeight: { xs: "200px", md: "300px" },
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    p: 4,
+                  }}
+                >
+                  <Image
+                    src={Star}
+                    alt="5 Star Rating - Customer satisfaction"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      maxWidth: "200px",
+                      objectFit: "contain",
+                    }}
+                  />
                 </Box>
               </Grid>
             </Grid>

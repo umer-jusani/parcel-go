@@ -47,6 +47,9 @@ import Tiktok from "./images/tiktok.webp";
 import Wix from "./images/wix.webp";
 import WooCommerce from "./images/woo-commerce.webp";
 import SaveOn from "./images/save.webp";
+import DYDynamo from "./images/diy_dynamo.webp";
+import MarketplaceMultitask from "./images/marketplace_multitasker.webp";
+import SavvySide from "./images/savvy_side.webp";
 
 
 
@@ -95,6 +98,9 @@ export {
   WhatSmartSend,
   WhySmartSend,
   SaveOn,
+  DYDynamo,
+  MarketplaceMultitask,
+  SavvySide,
   Logo,
   LogoWhite,
   TikTok,

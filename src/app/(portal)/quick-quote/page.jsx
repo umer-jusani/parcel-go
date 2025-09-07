@@ -106,8 +106,8 @@ const page = () => {
     <>
       {/* Banner Section */}
       <DynamicBanner
-        image1={GetAQuote}
-        image2={GetAQuote}
+        image1={<Image src={GetAQuote} alt="Get a Quote" width={250} height={"auto"} />}
+        image2={<Image src={GetAQuote} alt="Get a Quote" width={250} height={"auto"} />}
         isCalculator={true}
       >
         <Typography variant="h3" fontWeight={"bold"}>
