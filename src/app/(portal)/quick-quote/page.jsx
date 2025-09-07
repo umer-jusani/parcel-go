@@ -106,11 +106,17 @@ const page = () => {
     <>
       {/* Banner Section */}
       <DynamicBanner
-        title="Get a Quote"
-        description="Postage Costs from just £1.99 exc VAT"
         image1={GetAQuote}
         image2={GetAQuote}
-      />
+        isCalculator={true}
+      >
+        <Typography variant="h3" fontWeight={"bold"}>
+          Get a Quote
+        </Typography>
+        <Typography variant="h4" fontWeight={"medium"}>
+          Postage Costs from just £1.99 exc VAT
+        </Typography>
+      </DynamicBanner>
 
       {/* Cards Section */}
       <Container maxWidth="xl" sx={{ py: 8 }}>

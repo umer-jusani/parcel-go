@@ -1,17 +1,14 @@
 import React from "react";
 import { Stack } from "@mui/material";
 import { Container } from "@mui/material";
-import Image from "next/image";
-import { Typography } from "@mui/material";
-import { GetAQuote } from "@/assets";
 import { FLOW_SPACER } from "@/shared/constant/constant";
 import Calculator from "@/shared/components/calculator/calculator";
 
-const DynamicBanner = ({ title, description, image1, image2 }) => {
+const DynamicBanner = ({ image1, image2, isCalculator = false, children }) => {
   return (
     <>
       <Stack bgcolor={"background.white"} py={7}>
-        <Container maxWidth={"lg"}>
+        <Container maxWidth={"xl"}>
           <Stack
             direction={"row"}
             alignItems={"center"}
@@ -19,35 +16,18 @@ const DynamicBanner = ({ title, description, image1, image2 }) => {
             spacing={FLOW_SPACER}
           >
             {/* ImAage */}
-            <Image
-              src={image1}
-              alt="Get a Quote"
-              width={250}
-              height={"auto"}
-              objectFit="cover"
-            />
+            {image1}
             {/* Title */}
             <Stack textAlign={"center"} spacing={2}>
-              <Typography variant="h3" fontWeight={"bold"}>
-                {title}
-              </Typography>
-              <Typography variant="h4" fontWeight={"medium"}>
-                {description}
-              </Typography>
+              {children}
             </Stack>
             {/* ImAage */}
-            <Image
-              src={image2}
-              alt="Get a Quote"
-              width={250}
-              height={"auto"}
-              objectFit="cover"
-            />
+            {image2}
           </Stack>
 
           {/* Calculator */}
           <Container maxWidth={"lg"}>
-            <Calculator />
+            {isCalculator && <Calculator />}
           </Container>
         </Container>
       </Stack>
