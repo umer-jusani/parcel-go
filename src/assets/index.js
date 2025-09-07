@@ -50,6 +50,8 @@ import SaveOn from "./images/save.webp";
 import DYDynamo from "./images/diy_dynamo.webp";
 import MarketplaceMultitask from "./images/marketplace_multitasker.webp";
 import SavvySide from "./images/savvy_side.webp";
+import FedexBanner from "./images/fedexbanner.webp";
+import FedexBanner2 from "./images/fedexbanner-2.webp";
 
 
 
@@ -101,6 +103,8 @@ export {
   DYDynamo,
   MarketplaceMultitask,
   SavvySide,
+  FedexBanner,
+  FedexBanner2,
   Logo,
   LogoWhite,
   TikTok,
@@ -183,6 +187,7 @@ import FacebookIcon from "@mui/icons-material/FacebookOutlined";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import FaqDrawer from '../shared/common-layouts/faqs/faqs-drawer';
 
 export {
   AddIcon,
