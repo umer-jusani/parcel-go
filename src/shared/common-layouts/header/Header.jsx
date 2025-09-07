@@ -24,7 +24,7 @@ const navItems = [
   { label: "Smart Send", link: "/smart-send" },
   { label: "Get a Quote", link: "/quick-quote" },
   { label: "Services", link: "/services" },
-  { label: "Track a Parcel", link: "/home/track" },
+  { label: "Track a Parcel", link: "/track-parcel" },
   { label: "Bussiness", link: "/home/business" },
   { label: "Help", link: "/home/help" },
   { label: "cart", link: "/cart" },
