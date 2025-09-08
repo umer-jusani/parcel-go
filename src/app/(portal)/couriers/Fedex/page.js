@@ -7,6 +7,7 @@ import {
   FedexInnerCards,
   FedexTracking,
   NearestLocation,
+  World,
 } from "@/assets";
 import InputField from "@/shared/form-control/InputField";
 import UIButton from "@/shared/pure-components/button/button";
@@ -25,9 +26,13 @@ import DynamicBanner from "@/shared/components/banner/dynamic-banner";
 import AboutSection from "@/shared/components/service-couriers/AboutSection";
 import NavigationSection from "@/shared/components/service-couriers/NavigationSection";
 import WhySendSection from "@/shared/components/service-couriers/WhySendSection";
+import FreeTrackingSection from "@/shared/components/service-couriers/FreeTrackingSection";
+import ServicesSection from "@/shared/components/service-couriers/ServicesSection";
 import Image from "next/image";
 import "swiper/css";
 // navigation removed
+import { faqsFedex } from "@/shared/constant/constant";
+import Faqs from "@/shared/common-layouts/faqs/faqs";
 
 const Couriers = () => {
   const theme = useTheme();
@@ -85,6 +90,25 @@ const Couriers = () => {
         <Stack spacing={7} alignItems="center" sx={{ py: 6 }}>
           {/* Navigation Section */}
           <NavigationSection navigationItems={navigationItems} />
+
+          {/* FedEx Express Services */}
+          <ServicesSection
+            title="FedEx Express Services"
+            image={World}
+            imageAlt="FedEx Services"
+            items={[
+              {
+                heading: "Economy Service",
+                body:
+                  "FedEx Express courier services are highly reputable, and by choosing to send your parcel through us, you can rest assured it will arrive quickly and safely. FedEx Express Economy delivery offers worldwide delivery within 3–5 working days and can be tracked from collection until it reaches its recipient. You can use a FedEx Express drop off point to send your parcel across the UK or internationally from door to door.",
+              },
+              {
+                heading: "Express Delivery",
+                body:
+                  "Once your FedEx Express parcel is collected from a FedEx Express collection point or from your home, your item will be delivered within 2–3 working days throughout worldwide destinations. And thanks to the latest technology you can check the progress of your parcel online with FedEx Express international delivery tracking.",
+              },
+            ]}
+          />
 
           {/* Find Nearest Drop-off Point Section */}
           <Paper
@@ -200,72 +224,14 @@ const Couriers = () => {
           />
 
           {/* Free Tracking */}
-          <Paper
-            sx={{
-              borderRadius: 3,
-              backgroundColor: "white",
-              border: `2px solid #E0E0E0`,
-              width: "100%",
-              mx: "auto",
-            }}
-            elevation={0}
-          >
-            <Stack
-              direction={{ xs: "column", md: "row" }}
-              spacing={6}
-              alignItems={"center"}
-              sx={{ backgroundColor: theme.palette.background.lightBlue }}
-            >
-              {/* Left side - Content */}
-              <Stack spacing={3} py={4} px={6}>
-                <Typography
-                  variant="h4"
-                  sx={{
-                    fontWeight: theme.typography.Bold,
-                    color: theme.palette.text.primary,
-                  }}
-                >
-                  Free FedEx Tracking
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{ color: theme.palette.text.secondary }}
-                >
-                  Looking for professional courier tracking at no extra cost?
-                  Get free parcel tracking on all FedEx delivery services with
-                  Parcel2Go.
-                </Typography>
-                <Box>
-                  <UIButton
-                    variant="contained"
-                    sx={{
-                      backgroundColor: theme.palette.primary.main,
-                      color: "white",
-                      px: 3,
-                      "&:hover": {
-                        backgroundColor: theme.palette.primary.dark,
-                      },
-                    }}
-                  >
-                    Track Your FedEx Parcel
-                  </UIButton>
-                </Box>
-              </Stack>
-
-              <Box
-                component="img"
-                src={FedexTracking.src}
-                alt="FedEx Free Tracking"
-                sx={{
-                  width: "100%",
-                  maxHeight: "300px",
-                  objectFit: "cover",
-                  borderRadius: 2,
-                  display: "block",
-                }}
-              />
-            </Stack>
-          </Paper>
+          <FreeTrackingSection
+            title="Free FedEx Tracking"
+            description="Looking for professional courier tracking at no extra cost? Get free parcel tracking on all FedEx delivery services with Parcel2Go."
+            ctaText="Track Your FedEx Parcel"
+            image={FedexTracking}
+            imageAlt="FedEx Free Tracking"
+            backgroundColor="lightBlue"
+          />
 
           {/* Guides Slider */}
           <Container maxWidth="lg">
@@ -273,7 +239,7 @@ const Couriers = () => {
               style={{ width: "100%" }}
               slidesPerView={3}
               spaceBetween={30}
-              // navigation removed
+            // navigation removed
             >
               {FedexInnerCards.map((card, index) => (
                 <SwiperSlide key={index}>
@@ -329,6 +295,9 @@ const Couriers = () => {
               ))}
             </Swiper>
           </Container>
+
+          {/* Faqs Section */}
+          <Faqs faqa={faqsFedex} />
         </Stack>
       </Container>
     </>

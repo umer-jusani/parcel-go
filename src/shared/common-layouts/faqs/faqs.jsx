@@ -26,7 +26,7 @@ const Faqs = ({ faqa }) => {
 
   return (
     <>
-      <Container maxWidth="xl" sx={{ py: 8 }}>
+      <Container maxWidth="xl">
         <Stack textAlign={"center"} spacing={8} alignItems={"center"}>
           <Typography
             variant="h3"

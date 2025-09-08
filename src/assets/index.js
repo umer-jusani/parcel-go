@@ -52,7 +52,14 @@ import MarketplaceMultitask from "./images/marketplace_multitasker.webp";
 import SavvySide from "./images/savvy_side.webp";
 import FedexBanner from "./images/fedexbanner.webp";
 import FedexBanner2 from "./images/fedexbanner-2.webp";
-
+import UPSBanner from "./images/upsBanner.webp";
+import UPSVan from "./images/upsVan.webp";
+import UPSAbout from "./images/UPSAbout.webp";
+import UPSFreeTracking from "./images/UPSFreeTracking.webp";
+import DHLBanner from "./images/DHLBannner.webp";
+import DHLVan from "./images/DHLVan.webp";
+import DHLAbout from "./images/AboutDHL.webp";
+import DHLFreeTracking from "./images/DHLTracking.webp";
 
 
 // FedEx inner slider cards
@@ -100,11 +107,17 @@ export {
   WhatSmartSend,
   WhySmartSend,
   SaveOn,
+  DHLVan,
   DYDynamo,
   MarketplaceMultitask,
   SavvySide,
   FedexBanner,
+  UPSBanner,
   FedexBanner2,
+  UPSAbout,
+  UPSFreeTracking,
+  DHLBanner,
+  DHLFreeTracking,
   Logo,
   LogoWhite,
   TikTok,
@@ -118,10 +131,12 @@ export {
   Ireland,
   Apple,
   GooglePlay,
+  UPSVan,
   NearestLocation,
   FedEx,
   FedExAbout,
   FedexTracking,
+  DHLAbout,
   FedexSustainableShipping,
   FedexCourierFaqs,
   FedExStock,
