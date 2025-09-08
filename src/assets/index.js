@@ -61,6 +61,9 @@ import DHLVan from "./images/DHLVan.webp";
 import DHLAbout from "./images/AboutDHL.webp";
 import DHLFreeTracking from "./images/DHLTracking.webp";
 import BannerParcelForce from "./images/bannerParcelForce.webp";
+import WhyParcelForce from "./images/whyParcelForce.webp";
+import AboutParcelForce from "./images/aboutparcelforce.webp";
+import ParcelForceTracking from "./images/parcelforce-tracking.webp";
 
 
 // FedEx inner slider cards
@@ -107,10 +110,13 @@ const FedexInnerCards = [
 export {
   BannerParcelForce,
   WhatSmartSend,
+  ParcelForceTracking,
   WhySmartSend,
+  AboutParcelForce,
   SaveOn,
   DHLVan,
   DYDynamo,
+  WhyParcelForce,
   MarketplaceMultitask,
   SavvySide,
   FedexBanner,
