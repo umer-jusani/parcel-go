@@ -64,6 +64,9 @@ import BannerParcelForce from "./images/bannerParcelForce.webp";
 import WhyParcelForce from "./images/whyParcelForce.webp";
 import AboutParcelForce from "./images/aboutparcelforce.webp";
 import ParcelForceTracking from "./images/parcelforce-tracking.webp";
+import AramexWhy from "./images/AramexVan.jpg";
+import AboutAramex from "./images/AboutAramex.jpg";
+import TrackingAramex from "./images/trackingAramex.jpeg";
 
 
 // FedEx inner slider cards
@@ -126,6 +129,9 @@ export {
   UPSFreeTracking,
   DHLBanner,
   DHLFreeTracking,
+  AramexWhy,
+  AboutAramex,
+  TrackingAramex,
   Logo,
   LogoWhite,
   TikTok,

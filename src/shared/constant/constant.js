@@ -600,3 +600,48 @@ export const faqsUPS = [
     answer: "UPS Access Points are convenient locations where you can post parcels for shipping with UPS courier services. UPS is a door to door delivery service, where you can arrange a collection from a place of your choice.",
   },
 ];
+
+export const faqsAramex = [
+  {
+    id: 1,
+    question: "How much does Aramex parcel collection & delivery cost?",
+    answer:
+      "You can check the cost of sending a parcel with Aramex using our quick quote tool. Aramex offers competitive international and domestic shipping rates depending on parcel size, weight, and destination. <br /> - Get your Aramex quote today",
+  },
+  {
+    id: 2,
+    question: "What type of courier services does Aramex offer?",
+    answer:
+      "Aramex provides a wide range of services including Economy Express, Priority Express, Domestic Express, Shop & Ship, and Cash on Delivery (COD) solutions for e-commerce. Customers can book both local and international door-to-door deliveries.",
+  },
+  {
+    id: 3,
+    question: "How to send a parcel through Aramex?",
+    answer:
+      "To send a parcel through Aramex, you can book a pickup online, visit an Aramex service center, or use the Shop & Ship service for international purchases. All shipments are trackable through the Aramex website or mobile app.",
+  },
+  {
+    id: 4,
+    question: "How long does it take Aramex to deliver parcels?",
+    answer:
+      "Delivery times depend on the service chosen. Priority Express usually delivers within 2–3 working days worldwide, Economy Express within 4–6 working days, and Domestic Express offers same-day or next-day delivery within Pakistan.",
+  },
+  {
+    id: 5,
+    question: "Do Aramex deliver on weekends?",
+    answer:
+      "Aramex delivery schedules vary by country. In Pakistan and many regions, deliveries are mainly from Monday to Saturday during working hours. Weekend or holiday delivery options may depend on the local service center.",
+  },
+  {
+    id: 6,
+    question: "Does Aramex offer Cash on Delivery (COD)?",
+    answer:
+      "Yes, Aramex offers Cash on Delivery services for e-commerce and businesses. This allows customers to pay for their parcels at the time of delivery, with secure handling of payments.",
+  },
+  {
+    id: 7,
+    question: "How do I track my Aramex parcel?",
+    answer:
+      "You can track your Aramex parcel online using the shipment tracking number provided at the time of booking. Real-time tracking is available through the Aramex website and mobile application.",
+  },
+];

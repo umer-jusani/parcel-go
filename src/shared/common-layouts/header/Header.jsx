@@ -173,33 +173,35 @@ const ServicesMenu = ({ anchorEl, open, onClose }) => {
       anchorEl={anchorEl}
       open={open}
       onClose={onClose}
+      sx={{
+        minWidth: "1800px",
+        width: "100%",
+      }}
       slotProps={{
         paper: {
           sx: {
-            width: "100vw",
-            maxWidth: "100vw",
-            // backgroundColor: "background.white",
-            left: "0 !important",
-            right: "0 !important",
-            transform: "none !important",
+            // width: "fit-content",
+            // minWidth: "800px",
+            // maxWidth: "1200px",
+            backgroundColor: "background.white",
             mt: 1,
-            borderRadius: 0,
+            borderRadius: 2,
             boxShadow: "0px 4px 20px rgba(0,0,0,0.15)",
             border: "1px solid #e0e3ea",
-            borderLeft: "none",
-            borderRight: "none",
+            // left: "50% !important",
+            // transform: "translateX(-50%) !important",
           },
         },
       }}
-      transformOrigin={{ horizontal: "left", vertical: "top" }}
-      anchorOrigin={{ horizontal: "left", vertical: "bottom" }}
+      transformOrigin={{ horizontal: "center", vertical: "top" }}
+      anchorOrigin={{ horizontal: "center", vertical: "bottom" }}
     >
-      <Paper sx={{ width: "100%", p: 0, backgroundColor: "background.white" }}>
-        <Container maxWidth="xl" sx={{ py: 4, px: 2 }}>
-          <Grid container spacing={4}>
+      {/* <Paper sx={{ width: "100%", p: 0, backgroundColor: "background.white" }}> */}
+        <Container maxWidth="auto" sx={{ py: 4, px: 3, }}>
+          <Grid container spacing={6}>
             {/* Range of Couriers */}
-            <Grid item xs={12} sm={6} md={3}>
-              <Stack spacing={2}>
+            <Grid item xs={12} sm={6} md={4}>
+              <Stack spacing={3}>
                 <Typography
                   variant="h6"
                   sx={{
@@ -207,35 +209,40 @@ const ServicesMenu = ({ anchorEl, open, onClose }) => {
                     color: "#2E5B8A",
                     fontSize: "1.1rem",
                     mb: 1,
+                    whiteSpace: "nowrap",
                   }}
                 >
                   Range of Couriers
                 </Typography>
-                <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+                <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                   {[
                     "All Couriers",
-                    "Royal Mail",
                     "FedEx Express",
                     "Parcelforce",
                     "UPS",
-                    "UPS Access Point",
-                    "TNT",
-                    "Evri Drop-off",
                     "DPD",
-                    "Yodel Direct",
-                    "Evri Collection",
-                    "CitySprint",
-                    "InPost",
                     "DHL",
-                    "DHL Parcel",
-                    "DX",
-                    "Whistl",
-                    { name: "Relay", isNew: true },
-                    "Business Account",
+                    "Aramex",
+                    "Canpar",
+                    "Skynet",
                   ].map((item, index) => (
                     <MenuItem
                       key={index}
-                      onClick={() => handleMenuItemClick("/services/couriers")}
+                      onClick={() => {
+                        const courierRoutes = {
+                          "All Couriers": "/services/couriers",
+                          "FedEx Express": "/couriers/Fedex",
+                          "Parcelforce": "/couriers/parcel-force",
+                          "UPS": "/couriers/ups",
+                          "DPD": "/couriers/DPD",
+                          "DHL": "/couriers/dhl",
+                          "Aramex": "/couriers/aramex",
+                          "Canpar": "/couriers/canpar",
+                          "Skynet": "/couriers/skynet",
+                        };
+                        const route = courierRoutes[item] || "/services/couriers";
+                        handleMenuItemClick(route);
+                      }}
                       sx={{
                         p: 0,
                         py: 0,
@@ -290,8 +297,8 @@ const ServicesMenu = ({ anchorEl, open, onClose }) => {
 
 
             {/* International Parcel Delivery */}
-            <Grid item xs={12} sm={6} md={3}>
-              <Stack spacing={2}>
+            <Grid item xs={12} sm={6} md={4}>
+              <Stack spacing={3}>
                 <Typography
                   variant="h6"
                   sx={{
@@ -303,7 +310,7 @@ const ServicesMenu = ({ anchorEl, open, onClose }) => {
                 >
                   International Parcel Delivery
                 </Typography>
-                <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+                <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                   {[
                     { name: "EU Shipping info", isNew: true },
                     "All International Delivery",
@@ -376,8 +383,8 @@ const ServicesMenu = ({ anchorEl, open, onClose }) => {
             </Grid>
 
             {/* Delivery Tools */}
-            <Grid item xs={12} sm={6} md={3}>
-              <Stack spacing={2}>
+            <Grid item xs={12} sm={6} md={4}>
+              <Stack spacing={3}>
                 <Typography
                   variant="h6"
                   sx={{
@@ -385,11 +392,12 @@ const ServicesMenu = ({ anchorEl, open, onClose }) => {
                     color: "#2E5B8A",
                     fontSize: "1.1rem",
                     mb: 1,
+                    whiteSpace: "nowrap",
                   }}
                 >
                   Delivery Tools
                 </Typography>
-                <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+                <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                   {[
                     "Parcel2Go Prepay",
                     "Postcode Finder",
@@ -436,7 +444,7 @@ const ServicesMenu = ({ anchorEl, open, onClose }) => {
             </Grid>
           </Grid>
         </Container>
-      </Paper>
+      {/* </Paper> */}
     </Menu>
   );
 };
