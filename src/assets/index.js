@@ -60,6 +60,7 @@ import DHLBanner from "./images/DHLBannner.webp";
 import DHLVan from "./images/DHLVan.webp";
 import DHLAbout from "./images/AboutDHL.webp";
 import DHLFreeTracking from "./images/DHLTracking.webp";
+import BannerParcelForce from "./images/bannerParcelForce.webp";
 
 
 // FedEx inner slider cards
@@ -104,6 +105,7 @@ const FedexInnerCards = [
 ];
 
 export {
+  BannerParcelForce,
   WhatSmartSend,
   WhySmartSend,
   SaveOn,
