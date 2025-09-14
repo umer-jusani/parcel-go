@@ -44,7 +44,7 @@ const TrackParcel = () => {
                 maxWidth: 500,
               }}
             >
-              Track your parcel delivery and find your item's current whereabouts with this tracking tool.
+              Track your parcel delivery and find your item&#39;s current whereabouts with this tracking tool.
             </Typography>
 
             <Stack spacing={3} sx={{ width: "100%" }}>
