@@ -106,8 +106,22 @@ const page = () => {
     <>
       {/* Banner Section */}
       <DynamicBanner
-        image1={<Image src={GetAQuote} alt="Get a Quote" width={250} height={"auto"} />}
-        image2={<Image src={GetAQuote} alt="Get a Quote" width={250} height={"auto"} />}
+        image1={
+          <Image
+            src={GetAQuote}
+            alt="Get a Quote"
+            width={250}
+            height={"auto"}
+          />
+        }
+        image2={
+          <Image
+            src={GetAQuote}
+            alt="Get a Quote"
+            width={250}
+            height={"auto"}
+          />
+        }
         isCalculator={true}
       >
         <Typography variant="h3" fontWeight={"bold"}>
@@ -710,9 +724,10 @@ const page = () => {
           </Grid>
         </Grid>
       </Container>
-
       {/* Faqs Section */}
-      <Faqs faqa={faqsQuickQuote} />
+      <Stack mb={8}>
+        <Faqs faqa={faqsQuickQuote} />
+      </Stack>
     </>
   );
 };

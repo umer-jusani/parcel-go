@@ -73,7 +73,7 @@ import DPDBanner from "./images/dpdBanner.webp";
 import WhyDPD from "./images/dpdWhy.webp";
 import AboutDPD from "./images/dpdAbout.webp";
 import DPDservices from "./images/dpdServices.webp";
-
+import FedexLogo from "./images/Fedexlogo.svg";
 
 // FedEx inner slider cards
 const FedexInnerCards = [
@@ -153,6 +153,7 @@ export {
   Parcel,
   World,
   Delivery,
+  FedexLogo,
   UK,
   Ireland,
   Apple,

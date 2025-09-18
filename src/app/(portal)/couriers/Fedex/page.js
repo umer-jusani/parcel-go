@@ -17,7 +17,7 @@ import {
   Paper,
   Stack,
   Typography,
-  useTheme
+  useTheme,
 } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -54,7 +54,7 @@ const Couriers = () => {
   const fedexAboutParagraphs = [
     `The FedEx Express delivery service was founded as "Federal Express" in 1971 in a small town in Arkansas, United States. From there FedEx Express has grown consistently and now has over 280,000 employees.`,
     `FedEx Express <span style="color: ${theme.palette.primary.main}; font-weight: 600;">international courier</span> services now have a fleet of over 671 aircraft and 43,000 road vehicles across the world. They also have 1,200 service centres across the globe. Approximately 3.1 million packages are delivered by FedEx Express worldwide each day.`,
-    `Send a parcel with FedEx from just £3.65 exc VAT today. Get your FedEx Express quote now with our <span style="color: ${theme.palette.primary.main}; text-decoration: underline;">quick quote</span> tool.`
+    `Send a parcel with FedEx from just £3.65 exc VAT today. Get your FedEx Express quote now with our <span style="color: ${theme.palette.primary.main}; text-decoration: underline;">quick quote</span> tool.`,
   ];
 
   return (
@@ -99,13 +99,11 @@ const Couriers = () => {
             items={[
               {
                 heading: "Economy Service",
-                body:
-                  "FedEx Express courier services are highly reputable, and by choosing to send your parcel through us, you can rest assured it will arrive quickly and safely. FedEx Express Economy delivery offers worldwide delivery within 3–5 working days and can be tracked from collection until it reaches its recipient. You can use a FedEx Express drop off point to send your parcel across the UK or internationally from door to door.",
+                body: "FedEx Express courier services are highly reputable, and by choosing to send your parcel through us, you can rest assured it will arrive quickly and safely. FedEx Express Economy delivery offers worldwide delivery within 3–5 working days and can be tracked from collection until it reaches its recipient. You can use a FedEx Express drop off point to send your parcel across the UK or internationally from door to door.",
               },
               {
                 heading: "Express Delivery",
-                body:
-                  "Once your FedEx Express parcel is collected from a FedEx Express collection point or from your home, your item will be delivered within 2–3 working days throughout worldwide destinations. And thanks to the latest technology you can check the progress of your parcel online with FedEx Express international delivery tracking.",
+                body: "Once your FedEx Express parcel is collected from a FedEx Express collection point or from your home, your item will be delivered within 2–3 working days throughout worldwide destinations. And thanks to the latest technology you can check the progress of your parcel online with FedEx Express international delivery tracking.",
               },
             ]}
           />
@@ -214,6 +212,810 @@ const Couriers = () => {
             imageAlt="FedEx Van"
           />
 
+          {/* International Delivery Services */}
+          <Container maxWidth="lg">
+            <Stack spacing={6} alignItems="center">
+              <Typography
+                variant="h3"
+                sx={{
+                  fontWeight: theme.typography.Bold,
+                  color: theme.palette.text.primary,
+                  textAlign: "center",
+                }}
+              >
+                International Delivery Services
+              </Typography>
+{/*               
+              <Typography
+                variant="h6"
+                sx={{
+                  color: theme.palette.text.secondary,
+                  textAlign: "center",
+                  maxWidth: 600,
+                }}
+              >
+                Choose from our range of FedEx international delivery services designed to meet your shipping needs
+              </Typography> */}
+
+              {/* Drop Off Services Section */}
+              <Stack spacing={4} sx={{ width: "100%" }}>
+                <Typography
+                  variant="h4"
+                  sx={{
+                    fontWeight: theme.typography.Bold,
+                    color: theme.palette.text.primary,
+                    textAlign: "center",
+                  }}
+                >
+                  Drop Off Services
+                </Typography>
+
+                <Stack
+                  direction={{ xs: "column", md: "row" }}
+                  spacing={3}
+                  sx={{ width: "100%" }}
+                >
+                {/* FedEx International Connect Plus */}
+                <Paper
+                  elevation={0}
+                  sx={{
+                    flex: 1,
+                    p: 4,
+                    borderRadius: 3,
+                    border: `2px solid #E0E0E0`,
+                    backgroundColor: "white",
+                    transition: "all 0.3s ease",
+                    "&:hover": {
+                      borderColor: theme.palette.primary.main,
+                      boxShadow: "0 8px 25px rgba(0,0,0,0.1)",
+                    },
+                  }}
+                >
+                  <Stack spacing={3}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 2,
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          width: 50,
+                          height: 50,
+                          backgroundColor: theme.palette.primary.main,
+                          borderRadius: 2,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <Typography
+                          variant="h6"
+                          sx={{ color: "white", fontWeight: "bold" }}
+                        >
+                          F
+                        </Typography>
+                      </Box>
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          fontWeight: 600,
+                          color: theme.palette.text.primary,
+                        }}
+                      >
+                        FedEx International Connect Plus
+                      </Typography>
+                    </Box>
+
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: theme.palette.text.secondary,
+                        fontWeight: 500,
+                      }}
+                    >
+                      Estimated Delivery: Mon 22 Sep - Wed 24 Sep
+                    </Typography>
+
+                    <Stack spacing={2}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          p: 2,
+                          backgroundColor: "#F8F9FA",
+                          borderRadius: 2,
+                        }}
+                      >
+                        <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                          From £9.39
+                        </Typography>
+                        <UIButton
+                          variant="outlined"
+                          sx={{
+                            borderColor: theme.palette.primary.main,
+                            color: theme.palette.primary.main,
+                            "&:hover": {
+                              backgroundColor: theme.palette.primary.main,
+                              color: "white",
+                            },
+                          }}
+                        >
+                          Book without Protection
+                        </UIButton>
+                      </Box>
+
+                      <Box
+                        sx={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          p: 2,
+                          backgroundColor: theme.palette.primary.light,
+                          borderRadius: 2,
+                        }}
+                      >
+                        <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                          £9.49
+                        </Typography>
+                        <UIButton
+                          variant="contained"
+                          sx={{
+                            backgroundColor: theme.palette.primary.main,
+                            "&:hover": {
+                              backgroundColor: theme.palette.primary.dark,
+                            },
+                          }}
+                        >
+                          Book with £50 Protection
+                        </UIButton>
+                      </Box>
+                    </Stack>
+                  </Stack>
+                </Paper>
+
+                {/* FedEx International Economy */}
+                <Paper
+                  elevation={0}
+                  sx={{
+                    flex: 1,
+                    p: 4,
+                    borderRadius: 3,
+                    border: `2px solid #E0E0E0`,
+                    backgroundColor: "white",
+                    transition: "all 0.3s ease",
+                    "&:hover": {
+                      borderColor: theme.palette.primary.main,
+                      boxShadow: "0 8px 25px rgba(0,0,0,0.1)",
+                    },
+                  }}
+                >
+                  <Stack spacing={3}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 2,
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          width: 50,
+                          height: 50,
+                          backgroundColor: theme.palette.primary.main,
+                          borderRadius: 2,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <Typography
+                          variant="h6"
+                          sx={{ color: "white", fontWeight: "bold" }}
+                        >
+                          F
+                        </Typography>
+                      </Box>
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          fontWeight: 600,
+                          color: theme.palette.text.primary,
+                        }}
+                      >
+                        FedEx International Economy®
+                      </Typography>
+                    </Box>
+
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: theme.palette.text.secondary,
+                        fontWeight: 500,
+                      }}
+                    >
+                      Estimated Delivery: Tue 23 Sep - Fri 26 Sep
+                    </Typography>
+
+                    <Stack spacing={2}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          p: 2,
+                          backgroundColor: "#F8F9FA",
+                          borderRadius: 2,
+                        }}
+                      >
+                        <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                          From £18.49
+                        </Typography>
+                        <UIButton
+                          variant="outlined"
+                          sx={{
+                            borderColor: theme.palette.primary.main,
+                            color: theme.palette.primary.main,
+                            "&:hover": {
+                              backgroundColor: theme.palette.primary.main,
+                              color: "white",
+                            },
+                          }}
+                        >
+                          Book without Protection
+                        </UIButton>
+                      </Box>
+
+                      <Box
+                        sx={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          p: 2,
+                          backgroundColor: theme.palette.primary.light,
+                          borderRadius: 2,
+                        }}
+                      >
+                        <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                          £18.59
+                        </Typography>
+                        <UIButton
+                          variant="contained"
+                          sx={{
+                            backgroundColor: theme.palette.primary.main,
+                            "&:hover": {
+                              backgroundColor: theme.palette.primary.dark,
+                            },
+                          }}
+                        >
+                          Book with £50 Protection
+                        </UIButton>
+                      </Box>
+                    </Stack>
+                  </Stack>
+                </Paper>
+
+                {/* FedEx International Priority */}
+                <Paper
+                  elevation={0}
+                  sx={{
+                    flex: 1,
+                    p: 4,
+                    borderRadius: 3,
+                    border: `2px solid #E0E0E0`,
+                    backgroundColor: "white",
+                    transition: "all 0.3s ease",
+                    "&:hover": {
+                      borderColor: theme.palette.primary.main,
+                      boxShadow: "0 8px 25px rgba(0,0,0,0.1)",
+                    },
+                  }}
+                >
+                  <Stack spacing={3}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 2,
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          width: 50,
+                          height: 50,
+                          backgroundColor: theme.palette.primary.main,
+                          borderRadius: 2,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <Typography
+                          variant="h6"
+                          sx={{ color: "white", fontWeight: "bold" }}
+                        >
+                          F
+                        </Typography>
+                      </Box>
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          fontWeight: 600,
+                          color: theme.palette.text.primary,
+                        }}
+                      >
+                        FedEx International Priority®
+                      </Typography>
+                    </Box>
+
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: theme.palette.text.secondary,
+                        fontWeight: 500,
+                      }}
+                    >
+                      Estimated Delivery: Fri 19 Sep - Mon 22 Sep
+                    </Typography>
+
+                    <Stack spacing={2}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          p: 2,
+                          backgroundColor: "#F8F9FA",
+                          borderRadius: 2,
+                        }}
+                      >
+                        <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                          From £24.05
+                        </Typography>
+                        <UIButton
+                          variant="outlined"
+                          sx={{
+                            borderColor: theme.palette.primary.main,
+                            color: theme.palette.primary.main,
+                            "&:hover": {
+                              backgroundColor: theme.palette.primary.main,
+                              color: "white",
+                            },
+                          }}
+                        >
+                          Book without Protection
+                        </UIButton>
+                      </Box>
+
+                      <Box
+                        sx={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          p: 2,
+                          backgroundColor: theme.palette.primary.light,
+                          borderRadius: 2,
+                        }}
+                      >
+                        <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                          £24.15
+                        </Typography>
+                        <UIButton
+                          variant="contained"
+                          sx={{
+                            backgroundColor: theme.palette.primary.main,
+                            "&:hover": {
+                              backgroundColor: theme.palette.primary.dark,
+                            },
+                          }}
+                        >
+                          Book with £50 Protection
+                        </UIButton>
+                      </Box>
+                    </Stack>
+                  </Stack>
+                </Paper>
+                </Stack>
+              </Stack>
+
+              {/* Collection Services Section */}
+              <Stack spacing={4} sx={{ width: "100%" }}>
+                <Typography
+                  variant="h4"
+                  sx={{
+                    fontWeight: theme.typography.Bold,
+                    color: theme.palette.text.primary,
+                    textAlign: "center",
+                  }}
+                >
+                  Collection Services
+                </Typography>
+
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: theme.palette.text.secondary,
+                    textAlign: "center",
+                    maxWidth: 800,
+                  }}
+                >
+                  Collection services are available for your convenience. Our courier will pick up your parcel from your specified address at a scheduled time.
+                </Typography>
+
+                <Stack
+                  direction={{ xs: "column", md: "row" }}
+                  spacing={3}
+                  sx={{ width: "100%" }}
+                >
+                  {/* FedEx International Connect Plus Collection */}
+                  <Paper
+                    elevation={0}
+                    sx={{
+                      flex: 1,
+                      p: 4,
+                      borderRadius: 3,
+                      border: `2px solid #E0E0E0`,
+                      backgroundColor: "white",
+                      transition: "all 0.3s ease",
+                      "&:hover": {
+                        borderColor: theme.palette.primary.main,
+                        boxShadow: "0 8px 25px rgba(0,0,0,0.1)",
+                      },
+                    }}
+                  >
+                    <Stack spacing={3}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: 2,
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            width: 50,
+                            height: 50,
+                            backgroundColor: theme.palette.primary.main,
+                            borderRadius: 2,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <Typography
+                            variant="h6"
+                            sx={{ color: "white", fontWeight: "bold" }}
+                          >
+                            F
+                          </Typography>
+                        </Box>
+                        <Typography
+                          variant="h6"
+                          sx={{
+                            fontWeight: 600,
+                            color: theme.palette.text.primary,
+                          }}
+                        >
+                          FedEx International Connect Plus Collection
+                        </Typography>
+                      </Box>
+
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          color: theme.palette.text.secondary,
+                          fontWeight: 500,
+                        }}
+                      >
+                        Estimated Delivery: Mon 22 Sep - Wed 24 Sep
+                      </Typography>
+
+                      <Stack spacing={2}>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            p: 2,
+                            backgroundColor: "#F8F9FA",
+                            borderRadius: 2,
+                          }}
+                        >
+                          <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                            From £12.39
+                          </Typography>
+                          <UIButton
+                            variant="outlined"
+                            sx={{
+                              borderColor: theme.palette.primary.main,
+                              color: theme.palette.primary.main,
+                              "&:hover": {
+                                backgroundColor: theme.palette.primary.main,
+                                color: "white",
+                              },
+                            }}
+                          >
+                            Book without Protection
+                          </UIButton>
+                        </Box>
+
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            p: 2,
+                            backgroundColor: theme.palette.primary.light,
+                            borderRadius: 2,
+                          }}
+                        >
+                          <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                            £12.49
+                          </Typography>
+                          <UIButton
+                            variant="contained"
+                            sx={{
+                              backgroundColor: theme.palette.primary.main,
+                              "&:hover": {
+                                backgroundColor: theme.palette.primary.dark,
+                              },
+                            }}
+                          >
+                            Book with £50 Protection
+                          </UIButton>
+                        </Box>
+                      </Stack>
+                    </Stack>
+                  </Paper>
+
+                  {/* FedEx International Economy Collection */}
+                  <Paper
+                    elevation={0}
+                    sx={{
+                      flex: 1,
+                      p: 4,
+                      borderRadius: 3,
+                      border: `2px solid #E0E0E0`,
+                      backgroundColor: "white",
+                      transition: "all 0.3s ease",
+                      "&:hover": {
+                        borderColor: theme.palette.primary.main,
+                        boxShadow: "0 8px 25px rgba(0,0,0,0.1)",
+                      },
+                    }}
+                  >
+                    <Stack spacing={3}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: 2,
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            width: 50,
+                            height: 50,
+                            backgroundColor: theme.palette.primary.main,
+                            borderRadius: 2,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <Typography
+                            variant="h6"
+                            sx={{ color: "white", fontWeight: "bold" }}
+                          >
+                            F
+                          </Typography>
+                        </Box>
+                        <Typography
+                          variant="h6"
+                          sx={{
+                            fontWeight: 600,
+                            color: theme.palette.text.primary,
+                          }}
+                        >
+                          FedEx International Economy® Collection
+                        </Typography>
+                      </Box>
+
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          color: theme.palette.text.secondary,
+                          fontWeight: 500,
+                        }}
+                      >
+                        Estimated Delivery: Tue 23 Sep - Fri 26 Sep
+                      </Typography>
+
+                      <Stack spacing={2}>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            p: 2,
+                            backgroundColor: "#F8F9FA",
+                            borderRadius: 2,
+                          }}
+                        >
+                          <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                            From £21.49
+                          </Typography>
+                          <UIButton
+                            variant="outlined"
+                            sx={{
+                              borderColor: theme.palette.primary.main,
+                              color: theme.palette.primary.main,
+                              "&:hover": {
+                                backgroundColor: theme.palette.primary.main,
+                                color: "white",
+                              },
+                            }}
+                          >
+                            Book without Protection
+                          </UIButton>
+                        </Box>
+
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            p: 2,
+                            backgroundColor: theme.palette.primary.light,
+                            borderRadius: 2,
+                          }}
+                        >
+                          <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                            £21.59
+                          </Typography>
+                          <UIButton
+                            variant="contained"
+                            sx={{
+                              backgroundColor: theme.palette.primary.main,
+                              "&:hover": {
+                                backgroundColor: theme.palette.primary.dark,
+                              },
+                            }}
+                          >
+                            Book with £50 Protection
+                          </UIButton>
+                        </Box>
+                      </Stack>
+                    </Stack>
+                  </Paper>
+
+                  {/* FedEx International Priority Collection */}
+                  <Paper
+                    elevation={0}
+                    sx={{
+                      flex: 1,
+                      p: 4,
+                      borderRadius: 3,
+                      border: `2px solid #E0E0E0`,
+                      backgroundColor: "white",
+                      transition: "all 0.3s ease",
+                      "&:hover": {
+                        borderColor: theme.palette.primary.main,
+                        boxShadow: "0 8px 25px rgba(0,0,0,0.1)",
+                      },
+                    }}
+                  >
+                    <Stack spacing={3}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: 2,
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            width: 50,
+                            height: 50,
+                            backgroundColor: theme.palette.primary.main,
+                            borderRadius: 2,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <Typography
+                            variant="h6"
+                            sx={{ color: "white", fontWeight: "bold" }}
+                          >
+                            F
+                          </Typography>
+                        </Box>
+                        <Typography
+                          variant="h6"
+                          sx={{
+                            fontWeight: 600,
+                            color: theme.palette.text.primary,
+                          }}
+                        >
+                          FedEx International Priority® Collection
+                        </Typography>
+                      </Box>
+
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          color: theme.palette.text.secondary,
+                          fontWeight: 500,
+                        }}
+                      >
+                        Estimated Delivery: Fri 19 Sep - Mon 22 Sep
+                      </Typography>
+
+                      <Stack spacing={2}>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            p: 2,
+                            backgroundColor: "#F8F9FA",
+                            borderRadius: 2,
+                          }}
+                        >
+                          <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                            From £27.05
+                          </Typography>
+                          <UIButton
+                            variant="outlined"
+                            sx={{
+                              borderColor: theme.palette.primary.main,
+                              color: theme.palette.primary.main,
+                              "&:hover": {
+                                backgroundColor: theme.palette.primary.main,
+                                color: "white",
+                              },
+                            }}
+                          >
+                            Book without Protection
+                          </UIButton>
+                        </Box>
+
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            p: 2,
+                            backgroundColor: theme.palette.primary.light,
+                            borderRadius: 2,
+                          }}
+                        >
+                          <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                            £27.15
+                          </Typography>
+                          <UIButton
+                            variant="contained"
+                            sx={{
+                              backgroundColor: theme.palette.primary.main,
+                              "&:hover": {
+                                backgroundColor: theme.palette.primary.dark,
+                              },
+                            }}
+                          >
+                            Book with £50 Protection
+                          </UIButton>
+                        </Box>
+                      </Stack>
+                    </Stack>
+                  </Paper>
+                </Stack>
+              </Stack>
+            </Stack>
+          </Container>
+
           {/* About Fedex */}
           <AboutSection
             courierName="FedEx Express"
@@ -239,7 +1041,7 @@ const Couriers = () => {
               style={{ width: "100%" }}
               slidesPerView={3}
               spaceBetween={30}
-            // navigation removed
+              // navigation removed
             >
               {FedexInnerCards.map((card, index) => (
                 <SwiperSlide key={index}>
