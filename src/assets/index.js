@@ -69,6 +69,10 @@ import AboutAramex from "./images/AboutAramex.jpg";
 import TrackingAramex from "./images/trackingAramex.jpeg";
 import whySkynet from "./images/whySkynet.jpeg";
 import Skynet2 from "./images/Skynet2.jpg";
+import DPDBanner from "./images/dpdBanner.webp";
+import WhyDPD from "./images/dpdWhy.webp";
+import AboutDPD from "./images/dpdAbout.webp";
+import DPDservices from "./images/dpdServices.webp";
 
 
 // FedEx inner slider cards
@@ -136,6 +140,10 @@ export {
   AramexWhy,
   AboutAramex,
   TrackingAramex,
+  DPDBanner,
+  WhyDPD,
+  AboutDPD,
+  DPDservices,
   Logo,
   LogoWhite,
   TikTok,
