@@ -67,6 +67,8 @@ import ParcelForceTracking from "./images/parcelforce-tracking.webp";
 import AramexWhy from "./images/AramexVan.jpg";
 import AboutAramex from "./images/AboutAramex.jpg";
 import TrackingAramex from "./images/trackingAramex.jpeg";
+import whySkynet from "./images/whySkynet.jpeg";
+import Skynet2 from "./images/Skynet2.jpg";
 
 
 // FedEx inner slider cards
@@ -112,6 +114,7 @@ const FedexInnerCards = [
 
 export {
   BannerParcelForce,
+  whySkynet,
   WhatSmartSend,
   ParcelForceTracking,
   WhySmartSend,
@@ -119,6 +122,7 @@ export {
   SaveOn,
   DHLVan,
   DYDynamo,
+  Skynet2,
   WhyParcelForce,
   MarketplaceMultitask,
   SavvySide,
