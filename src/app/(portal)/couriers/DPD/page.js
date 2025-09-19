@@ -1,5 +1,5 @@
 "use client"
-import { AboutDPD, DPDBanner, DPDservices, FedexBanner2, FedexTracking, WhyDPD } from '@/assets'
+import { AboutDPD, DPDBanner, DPDservices, FedexBanner2, FedexTracking, WhyDPD, DPDLogo } from '@/assets'
 import Faqs from '@/shared/common-layouts/faqs/faqs'
 import DynamicBanner from '@/shared/components/banner/dynamic-banner'
 import AboutSection from '@/shared/components/service-couriers/AboutSection'
@@ -7,12 +7,14 @@ import FreeTrackingSection from '@/shared/components/service-couriers/FreeTracki
 import NavigationSection from '@/shared/components/service-couriers/NavigationSection'
 import ServicesSection from '@/shared/components/service-couriers/ServicesSection'
 import WhySendSection from '@/shared/components/service-couriers/WhySendSection'
+import UIButton from '@/shared/pure-components/button/button'
 import { faqsdpd } from '@/shared/constant/constant'
-import { Container, Stack, Typography } from '@mui/material'
+import { Box, Container, Grid, Paper, Stack, Typography, useTheme } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 
 const DPD = () => {
+  const theme = useTheme();
 
   const navigationItems = [
     "DPD Delivery Services",
@@ -109,6 +111,396 @@ const DPD = () => {
               },
             ]}
           />
+
+          {/* International Delivery Services */}
+          <Container maxWidth="lg">
+            <Stack spacing={6} alignItems="center">
+              <Typography
+                variant="h3"
+                sx={{
+                  fontWeight: theme.typography.Bold,
+                  color: theme.palette.text.primary,
+                  textAlign: "center",
+                }}
+              >
+                International Delivery Services
+              </Typography>
+
+              {/* Drop Off Services Section */}
+              <Stack spacing={4} sx={{ width: "100%" }}>
+                <Typography
+                  variant="h4"
+                  sx={{
+                    fontWeight: theme.typography.Bold,
+                    color: theme.palette.text.primary,
+                    textAlign: "center",
+                  }}
+                >
+                  Drop Off Services
+                </Typography>
+
+                <Grid container spacing={3} justifyContent="center">
+                  {/* DPD Economy Drop Off */}
+                  <Grid item xs={12} sm={6} md={4}>
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        flex: 1,
+                        p: 4,
+                        borderRadius: 3,
+                        border: `2px solid #E0E0E0`,
+                        backgroundColor: "white",
+                        transition: "all 0.3s ease",
+                        "&:hover": {
+                          borderColor: theme.palette.primary.main,
+                          boxShadow: "0 8px 25px rgba(0,0,0,0.1)",
+                        },
+                      }}
+                    >
+                      <Stack spacing={3}>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 2,
+                            flexWrap: "wrap",
+                          }}
+                        >
+                          <Image
+                            src={DPDLogo}
+                            alt="DPD Logo"
+                            width={88}
+                            height={28}
+                            style={{ height: 28, width: "auto" }}
+                          />
+                          <Typography
+                            variant="h6"
+                            sx={{
+                              fontWeight: 600,
+                              color: theme.palette.text.primary,
+                              lineHeight: 1.2,
+                            }}
+                          >
+                            DPD Drop Off Small
+                          </Typography>
+                        </Box>
+
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            color: theme.palette.text.secondary,
+                            fontWeight: 500,
+                          }}
+                        >
+                          Est Delivery:Tue 23 Sep - Wed 24 Sep
+                        </Typography>
+
+                        <Stack spacing={2}>
+                          <Box
+                            sx={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              alignItems: "center",
+                              p: 2,
+                              backgroundColor: "#F8F9FA",
+                              borderRadius: 2,
+                            }}
+                          >
+                            <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                              From £5.29
+                            </Typography>
+                            <UIButton
+                              variant="outlined"
+                              sx={{
+                                borderColor: theme.palette.primary.main,
+                                color: theme.palette.primary.main,
+                                "&:hover": {
+                                  backgroundColor: theme.palette.primary.main,
+                                  color: "white",
+                                },
+                              }}
+                            >
+                              Book without Protection
+                            </UIButton>
+                          </Box>
+
+                          <Box
+                            sx={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              alignItems: "center",
+                              p: 2,
+                              backgroundColor: theme.palette.primary.light,
+                              borderRadius: 2,
+                            }}
+                          >
+                            <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                              £5.34
+                            </Typography>
+                            <UIButton
+                              variant="contained"
+                              sx={{
+                                backgroundColor: theme.palette.primary.main,
+                                "&:hover": {
+                                  backgroundColor: theme.palette.primary.dark,
+                                },
+                              }}
+                            >
+                              Book with £20 Protection
+                            </UIButton>
+                          </Box>
+                        </Stack>
+                      </Stack>
+                    </Paper>
+                  </Grid>
+
+                  {/* DPD Priority Drop Off */}
+                  <Grid item xs={12} sm={6} md={4}>
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        flex: 1,
+                        p: 4,
+                        borderRadius: 3,
+                        border: `2px solid #E0E0E0`,
+                        backgroundColor: "white",
+                        transition: "all 0.3s ease",
+                        "&:hover": {
+                          borderColor: theme.palette.primary.main,
+                          boxShadow: "0 8px 25px rgba(0,0,0,0.1)",
+                        },
+                      }}
+                    >
+                      <Stack spacing={3}>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 2,
+                            flexWrap: "wrap",
+                          }}
+                        >
+                          <Image
+                            src={DPDLogo}
+                            alt="DPD Logo"
+                            width={88}
+                            height={28}
+                            style={{ height: 28, width: "auto" }}
+                          />
+                          <Typography
+                            variant="h6"
+                            sx={{
+                              fontWeight: 600,
+                              color: theme.palette.text.primary,
+                              lineHeight: 1.2,
+                            }}
+                          >
+                            DPD Drop Off
+                          </Typography>
+                        </Box>
+
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            color: theme.palette.text.secondary,
+                            fontWeight: 500,
+                          }}
+                        >
+                          Est Delivery:Tue 23 Sep - Wed 24 Sep
+                        </Typography>
+
+                        <Stack spacing={2}>
+                          <Box
+                            sx={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              alignItems: "center",
+                              p: 2,
+                              backgroundColor: "#F8F9FA",
+                              borderRadius: 2,
+                            }}
+                          >
+                            <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                              From £6.29
+                            </Typography>
+                            <UIButton
+                              variant="outlined"
+                              sx={{
+                                borderColor: theme.palette.primary.main,
+                                color: theme.palette.primary.main,
+                                "&:hover": {
+                                  backgroundColor: theme.palette.primary.main,
+                                  color: "white",
+                                },
+                              }}
+                            >
+                              Book without Protection
+                            </UIButton>
+                          </Box>
+
+                          <Box
+                            sx={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              alignItems: "center",
+                              p: 2,
+                              backgroundColor: theme.palette.primary.light,
+                              borderRadius: 2,
+                            }}
+                          >
+                            <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                              £6.39
+                            </Typography>
+                            <UIButton
+                              variant="contained"
+                              sx={{
+                                backgroundColor: theme.palette.primary.main,
+                                "&:hover": {
+                                  backgroundColor: theme.palette.primary.dark,
+                                },
+                              }}
+                            >
+                              Book with £20 Protection
+                            </UIButton>
+                          </Box>
+                        </Stack>
+                      </Stack>
+                    </Paper>
+                  </Grid>
+                </Grid>
+              </Stack>
+
+              {/* Collection Services Section */}
+              <Stack spacing={4} sx={{ width: "100%" }}>
+                <Typography
+                  variant="h4"
+                  sx={{
+                    fontWeight: theme.typography.Bold,
+                    color: theme.palette.text.primary,
+                    textAlign: "center",
+                  }}
+                >
+                  Collection Services
+                </Typography>
+                <Grid container spacing={3} sx={{ width: "100%" }} justifyContent="center">
+                  {/* DPD Economy Collection */}
+                  <Grid item xs={12} sm={6} md={4}>
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        flex: 1,
+                        p: 4,
+                        borderRadius: 3,
+                        border: `2px solid #E0E0E0`,
+                        backgroundColor: "white",
+                        transition: "all 0.3s ease",
+                        "&:hover": {
+                          borderColor: theme.palette.primary.main,
+                          boxShadow: "0 8px 25px rgba(0,0,0,0.1)",
+                        },
+                      }}
+                    >
+                      <Stack spacing={3}>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 2,
+                            flexWrap: "wrap",
+                          }}
+                        >
+                          <Image
+                            src={DPDLogo}
+                            alt="DPD Logo"
+                            width={88}
+                            height={28}
+                            style={{ height: 28, width: "auto" }}
+                          />
+                          <Typography
+                            variant="h6"
+                            sx={{
+                              fontWeight: 600,
+                              color: theme.palette.text.primary,
+                              lineHeight: 1.2,
+                            }}
+                          >
+                            DPD Collection
+                          </Typography>
+                        </Box>
+
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            color: theme.palette.text.secondary,
+                            fontWeight: 500,
+                          }}
+                        >
+                          Est Delivery:Tue 23 Sep - Thu 02 Oct
+                        </Typography>
+
+                        <Stack spacing={2}>
+                          <Box
+                            sx={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              alignItems: "center",
+                              p: 2,
+                              backgroundColor: "#F8F9FA",
+                              borderRadius: 2,
+                            }}
+                          >
+                            <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                              From £9.60
+                            </Typography>
+                            <UIButton
+                              variant="outlined"
+                              sx={{
+                                borderColor: theme.palette.primary.main,
+                                color: theme.palette.primary.main,
+                                "&:hover": {
+                                  backgroundColor: theme.palette.primary.main,
+                                  color: "white",
+                                },
+                              }}
+                            >
+                              Book without Protection
+                            </UIButton>
+                          </Box>
+
+                          <Box
+                            sx={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              alignItems: "center",
+                              p: 2,
+                              backgroundColor: theme.palette.primary.light,
+                              borderRadius: 2,
+                            }}
+                          >
+                            <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                              £9.70
+                            </Typography>
+                            <UIButton
+                              variant="contained"
+                              sx={{
+                                backgroundColor: theme.palette.primary.main,
+                                "&:hover": {
+                                  backgroundColor: theme.palette.primary.dark,
+                                },
+                              }}
+                            >
+                              Book with £20 Protection
+                            </UIButton>
+                          </Box>
+                        </Stack>
+                      </Stack>
+                    </Paper>
+                  </Grid>
+
+                </Grid>
+              </Stack>
+            </Stack>
+          </Container>
 
           {/* Free Tracking */}
           <FreeTrackingSection

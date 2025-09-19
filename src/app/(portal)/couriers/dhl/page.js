@@ -7,8 +7,9 @@ import FreeTrackingSection from '@/shared/components/service-couriers/FreeTracki
 import NavigationSection from '@/shared/components/service-couriers/NavigationSection'
 import ServicesSection from '@/shared/components/service-couriers/ServicesSection'
 import WhySendSection from '@/shared/components/service-couriers/WhySendSection'
+import UIButton from '@/shared/pure-components/button/button'
 import { faqsDHL } from '@/shared/constant/constant'
-import { Container, Stack, Typography } from '@mui/material'
+import { Box, Container, Grid, Paper, Stack, Typography, useTheme } from '@mui/material'
 import Image from 'next/image'
 
 const navigationItems = [
@@ -33,6 +34,7 @@ const dhlAboutParagraphs = [
 
 
 const DHL = () => {
+  const theme = useTheme();
   return (
     <>
       {/* Banner Section */}
@@ -101,6 +103,136 @@ const DHL = () => {
               },
             ]}
           />
+
+          {/* International Delivery Services */}
+          <Container maxWidth="lg">
+            <Stack spacing={6} alignItems="center">
+              <Typography
+                variant="h3"
+                sx={{
+                  fontWeight: theme.typography.Bold,
+                  color: theme.palette.text.primary,
+                  textAlign: "center",
+                }}
+              >
+                International Delivery Services
+              </Typography>
+
+              {/* Drop Off Services Section */}
+              <Stack spacing={4} sx={{ width: "100%" }}>
+                <Typography
+                  variant="h4"
+                  sx={{
+                    fontWeight: theme.typography.Bold,
+                    color: theme.palette.text.primary,
+                    textAlign: "center",
+                  }}
+                >
+                  Collection Services
+                </Typography>
+
+                <Grid container spacing={3} justifyContent="center">
+                  {/* DHL Drop Off */}
+                  <Grid item xs={12} sm={6} md={4}>
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        flex: 1,
+                        p: 4,
+                        borderRadius: 3,
+                        border: `2px solid #E0E0E0`,
+                        backgroundColor: "white",
+                        transition: "all 0.3s ease",
+                        "&:hover": {
+                          borderColor: theme.palette.primary.main,
+                          boxShadow: "0 8px 25px rgba(0,0,0,0.1)",
+                        },
+                      }}
+                    >
+                      <Stack spacing={3}>
+                        <Typography
+                          variant="h6"
+                          sx={{
+                            fontWeight: 600,
+                            color: theme.palette.text.primary,
+                            lineHeight: 1.2,
+                          }}
+                        >
+                          DHL eCommerce UK Collection
+                        </Typography>
+
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            color: theme.palette.text.secondary,
+                            fontWeight: 500,
+                          }}
+                        >
+                          Est Delivery:Tue 23 Sep - Thu 02 Oct
+                        </Typography>
+
+                        <Stack spacing={2}>
+                          <Box
+                            sx={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              alignItems: "center",
+                              p: 2,
+                              backgroundColor: "#F8F9FA",
+                              borderRadius: 2,
+                            }}
+                          >
+                            <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                              From £8.14
+                            </Typography>
+                            <UIButton
+                              variant="outlined"
+                              sx={{
+                                borderColor: theme.palette.primary.main,
+                                color: theme.palette.primary.main,
+                                "&:hover": {
+                                  backgroundColor: theme.palette.primary.main,
+                                  color: "white",
+                                },
+                              }}
+                            >
+                              Book without Protection
+                            </UIButton>
+                          </Box>
+
+                          <Box
+                            sx={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              alignItems: "center",
+                              p: 2,
+                              backgroundColor: theme.palette.primary.light,
+                              borderRadius: 2,
+                            }}
+                          >
+                            <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                              £8.24
+                            </Typography>
+                            <UIButton
+                              variant="contained"
+                              sx={{
+                                backgroundColor: theme.palette.primary.main,
+                                "&:hover": {
+                                  backgroundColor: theme.palette.primary.dark,
+                                },
+                              }}
+                            >
+                              Book with £20 Protection
+                            </UIButton>
+                          </Box>
+                        </Stack>
+                      </Stack>
+                    </Paper>
+                  </Grid>
+                </Grid>
+              </Stack>
+            </Stack>
+          </Container>
 
           {/* Free Tracking */}
           <FreeTrackingSection
