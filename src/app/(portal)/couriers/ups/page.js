@@ -1,10 +1,11 @@
 "use client"
 import React from 'react'
-import { FedexBanner2, UPSBanner, UPSVan, UPSAbout, World, UPSFreeTracking } from '@/assets'
+import { FedexBanner2, UPSBanner, UPSVan, UPSAbout, World, UPSFreeTracking, UPSLogo } from '@/assets'
 import DynamicBanner from '@/shared/components/banner/dynamic-banner'
 import NavigationSection from '@/shared/components/service-couriers/NavigationSection'
 import WhySendSection from '@/shared/components/service-couriers/WhySendSection'
-import { Container, Stack, Typography, useTheme } from '@mui/material'
+import { Container, Stack, Typography, useTheme, Grid, Paper, Box } from '@mui/material'
+import UIButton from '@/shared/pure-components/button/button'
 import Image from 'next/image'
 import AboutSection from '@/shared/components/service-couriers/AboutSection'
 import ServicesSection from '@/shared/components/service-couriers/ServicesSection'
@@ -107,6 +108,101 @@ const UPS = () => {
               },
             ]}
           />
+
+          {/* Collection Services */}
+          <Container maxWidth="lg">
+            <Stack spacing={2} sx={{ width: '100%' }}>
+              <Typography
+                variant="h4"
+                sx={{ fontWeight: theme.typography.Bold, color: theme.palette.text.primary, textAlign: 'center' }}
+              >
+                Collection Services
+              </Typography>
+
+              <Grid container spacing={3} justifyContent="center">
+                {/* UPS Standard */}
+                <Grid item xs={12} sm={6} md={4}>
+                  <Paper elevation={0} sx={{ p: 4, borderRadius: 3, border: `2px solid #E0E0E0`, backgroundColor: 'white', transition: 'all 0.3s ease', '&:hover': { borderColor: theme.palette.primary.main, boxShadow: '0 8px 25px rgba(0,0,0,0.1)' } }}>
+                    <Stack spacing={2}>
+                      <Box>
+                        <Image src={UPSLogo} alt="UPS Logo" width={60} height={40} style={{ height: 30, width: 'auto' }} />
+                        <Typography variant="h6" sx={{ fontWeight: 600, color: theme.palette.text.primary }}>
+                          UPS Standard®
+                        </Typography>
+                      </Box>
+
+                      <Typography variant="body2" sx={{ color: theme.palette.text.secondary, fontWeight: 500 }}>
+                        Est Delivery:Tue 23 Sep - Thu 02 Oct
+                      </Typography>
+
+                      <Stack spacing={2}>
+                        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 2, backgroundColor: '#F8F9FA', borderRadius: 2 }}>
+                          <Typography variant="body1" sx={{ fontWeight: 500 }}>From £8.10</Typography>
+                        </Box>
+                        <UIButton variant="contained" sx={{ backgroundColor: theme.palette.primary.main, '&:hover': { backgroundColor: theme.palette.primary.dark } }}>
+                          Book with £50 Protection
+                        </UIButton>
+                      </Stack>
+                    </Stack>
+                  </Paper>
+                </Grid>
+
+                {/* UPS Express Saver by 12pm */}
+                <Grid item xs={12} sm={6} md={4}>
+                  <Paper elevation={0} sx={{ p: 4, borderRadius: 3, border: `2px solid #E0E0E0`, backgroundColor: 'white', transition: 'all 0.3s ease', '&:hover': { borderColor: theme.palette.primary.main, boxShadow: '0 8px 25px rgba(0,0,0,0.1)' } }}>
+                    <Stack spacing={2}>
+                      <Box>
+                        <Image src={UPSLogo} alt="UPS Logo" width={60} height={40} style={{ height: 30, width: 'auto' }} />
+                        <Typography variant="h6" sx={{ fontWeight: 600, color: theme.palette.text.primary }}>
+                          UPS Express Saver® by 12pm
+                        </Typography>
+                      </Box>
+
+                      <Typography variant="body2" sx={{ color: theme.palette.text.secondary, fontWeight: 500 }}>
+                        Est Delivery:Tue 23 Sep - Thu 02 Oct
+                      </Typography>
+
+                      <Stack spacing={2}>
+                        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 2, backgroundColor: '#F8F9FA', borderRadius: 2 }}>
+                          <Typography variant="body1" sx={{ fontWeight: 500 }}>From £10.04</Typography>
+                        </Box>
+                        <UIButton variant="contained" sx={{ backgroundColor: theme.palette.primary.main, '&:hover': { backgroundColor: theme.palette.primary.dark } }}>
+                          Book with £50 Protection
+                        </UIButton>
+                      </Stack>
+                    </Stack>
+                  </Paper>
+                </Grid>
+
+                {/* UPS Express by 10.30am */}
+                <Grid item xs={12} sm={6} md={4}>
+                  <Paper elevation={0} sx={{ p: 4, borderRadius: 3, border: `2px solid #E0E0E0`, backgroundColor: 'white', transition: 'all 0.3s ease', '&:hover': { borderColor: theme.palette.primary.main, boxShadow: '0 8px 25px rgba(0,0,0,0.1)' } }}>
+                    <Stack spacing={2}>
+                      <Box>
+                        <Image src={UPSLogo} alt="UPS Logo" width={60} height={40} style={{ height: 30, width: 'auto' }} />
+                        <Typography variant="h6" sx={{ fontWeight: 600, color: theme.palette.text.primary }}>
+                          UPS Express® by 10.30am
+                        </Typography>
+                      </Box>
+
+                      <Typography variant="body2" sx={{ color: theme.palette.text.secondary, fontWeight: 500 }}>
+                        Est Delivery:Tue 23 Sep - Thu 02 Oct
+                      </Typography>
+
+                      <Stack spacing={2}>
+                        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 2, backgroundColor: '#F8F9FA', borderRadius: 2 }}>
+                          <Typography variant="body1" sx={{ fontWeight: 500 }}>From £14.64</Typography>
+                        </Box>
+                        <UIButton variant="contained" sx={{ backgroundColor: theme.palette.primary.main, '&:hover': { backgroundColor: theme.palette.primary.dark } }}>
+                          Book with £50 Protection
+                        </UIButton>
+                      </Stack>
+                    </Stack>
+                  </Paper>
+                </Grid>
+              </Grid>
+            </Stack>
+          </Container>
 
           {/* Free Tracking */}
           <FreeTrackingSection
