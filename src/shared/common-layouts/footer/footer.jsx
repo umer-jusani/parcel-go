@@ -1,16 +1,16 @@
 "use client";
 
-import { FacebookIcon, Ireland, LinkedInIcon, Logo, LogoWhite, TwitterIcon, UK, YouTubeIcon, Apple, GooglePlay } from "@/assets";
-import { Box, Container, Grid, Grid2, Stack, Typography, TextField, Button, Link } from "@mui/material";
+import { Apple, FacebookIcon, GooglePlay, Ireland, LinkedInIcon, LogoWhite, TwitterIcon, UK, YouTubeIcon } from "@/assets";
+import { Box, Button, Container, Grid, Link, Stack, TextField, Typography, useTheme } from "@mui/material";
 import Image from "next/image";
 
 
 const Footer = () => {
-
+    const theme = useTheme();
     return (
         <>
             {/* Newsletter Signup Section */}
-            <Box sx={{ backgroundColor: '#1976d2', py: 3 }}>
+            <Box sx={{ backgroundColor: theme.palette.background["200"], py: 3 }}>
                 <Container maxWidth="lg">
                     <Stack direction={{ xs: 'column', md: 'row' }} spacing={2} alignItems="center" justifyContent="space-between">
                         <Typography variant="h5" sx={{ color: 'white', fontWeight: 600, textAlign: { xs: 'center', md: 'left' } }}>
@@ -32,14 +32,12 @@ const Footer = () => {
                             />
                             <Button
                                 variant="contained"
+                                color="secondary.main"
                                 sx={{
-                                    backgroundColor: 'white',
-                                    color: '#1976d2',
+                                    backgroundColor: 'secondary.main',
+                                    color: 'white',
                                     fontWeight: 600,
                                     px: 4,
-                                    '&:hover': {
-                                        backgroundColor: '#f5f5f5'
-                                    }
                                 }}
                             >
                                 Submit
@@ -50,7 +48,7 @@ const Footer = () => {
             </Box>
 
             {/* Main Footer Section */}
-            <Box sx={{ backgroundColor: '#2c3e50', py: 6, color: 'white' }}>
+            <Box sx={{ backgroundColor: theme.palette.background["100"], py: 6, color: 'white' }}>
                 <Container maxWidth="lg">
                     <Grid container spacing={4}>
                         {/* Logo and Social Section */}
@@ -277,9 +275,9 @@ const Footer = () => {
             </Box>
 
             {/* Copyright Section */}
-            <Box sx={{ backgroundColor: '#1a252f', py: 2, color: '#ccc' }}>
+            <Box sx={{ backgroundColor: theme.palette.background["200"], py: 2, color: '#ccc' }}>
                 <Container maxWidth="lg">
-                    <Typography variant="body2" sx={{ textAlign: 'center', fontSize: '0.875rem' }}>
+                    <Typography variant="body2" sx={{ textAlign: 'center', fontSize: '0.875rem', color: 'white' }}>
                         © Parcel2Go.com Ltd 1995-2025 All Rights Reserved. | Company Number: 02591405 | VAT Number: 597 849161
                     </Typography>
                 </Container>

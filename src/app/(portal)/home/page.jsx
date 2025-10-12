@@ -1,13 +1,13 @@
+"use client";
 import {
   Delivery,
   Duck,
-  GetAQuote,
   Parcel,
   SignIn,
   Star,
   TikTok,
   USA,
-  World,
+  World
 } from "@/assets";
 import Faqs from "@/shared/common-layouts/faqs/faqs";
 import HomeBanner from "@/shared/components/banner/home-banner";
@@ -23,88 +23,92 @@ import {
   Grid,
   Stack,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import Image from "next/image";
 
 const Home = () => {
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <>
       {/* Blue Banner Section */}
-      <Box
-        sx={{
-          background: "#91c5f0",
-          color: "white",
-          position: "relative",
-          overflow: "hidden",
-          py: 1,
-        }}
-      >
-        <Stack
-          direction={{ xs: "column", md: "row" }}
-          alignItems="center"
-          justifyContent="center"
-          spacing={3}
-          px={2}
-        >
-          {/* Text Content */}
-          <Box>
-            <Typography
-              variant="body1"
-              sx={{
-                fontWeight: "bold",
-                color: "text.secondary",
-              }}
-            >
-              Get the lowest shipping rates to the USA with UPS through Smart
-              Send!
-            </Typography>
-          </Box>
-
-          {/* Get Started Button */}
-          <Button
-            variant="outlined"
-            size="small"
-            sx={{
-              borderColor: "text.secondary",
-              color: "text.secondary",
-              fontWeight: "bold",
-              textTransform: "none",
-              borderRadius: 2,
-              px: 2,
-              fontSize: "1rem",
-            }}
-            endIcon={
-              <Box
-                component="span"
-                sx={{
-                  display: "inline-block",
-                  ml: 1,
-                  fontSize: "1.2rem",
-                }}
-              >
-                →
-              </Box>
-            }
-          >
-            Get started
-          </Button>
-        </Stack>
-
-        {/* Background Decoration */}
+      {!isMobile && (
         <Box
           sx={{
-            position: "absolute",
-            right: 0,
-            bottom: 0,
-            width: "300px",
-            height: "150px",
-            background: "rgba(255, 255, 255, 0.1)",
-            borderRadius: "50%",
-            transform: "translate(50%, 50%)",
-            display: { xs: "none", md: "block" },
+            background: theme.palette.background["100"],
+            position: "relative",
+            overflow: "hidden",
+            py: 1,
           }}
-        />
-      </Box>
+        >
+          <Stack
+            direction={{ xs: "column", md: "row" }}
+            alignItems="center"
+            justifyContent="center"
+            spacing={3}
+            px={2}
+          >
+            {/* Text Content */}
+            <Box>
+              <Typography
+                variant="body1"
+                sx={{
+                  color: "white",
+                  fontWeight: "bold",
+                }}
+              >
+                Get the lowest shipping rates to the USA with UPS through Smart
+                Send!
+              </Typography>
+            </Box>
+
+            {/* Get Started Button */}
+            <Button
+              variant="outlined"
+              size="small"
+              sx={{
+                borderColor: "white",
+                color: "white",
+                fontWeight: "bold",
+                textTransform: "none",
+                borderRadius: 2,
+                px: 2,
+                fontSize: "1rem",
+              }}
+              endIcon={
+                <Box
+                  component="span"
+                  sx={{
+                    display: "inline-block",
+                    ml: 1,
+                    fontSize: "1.2rem",
+                  }}
+                >
+                  →
+                </Box>
+              }
+            >
+              Get started
+            </Button>
+          </Stack>
+
+          {/* Background Decoration */}
+          <Box
+            sx={{
+              position: "absolute",
+              right: 0,
+              bottom: 0,
+              width: "300px",
+              height: "150px",
+              background: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "50%",
+              transform: "translate(50%, 50%)",
+              display: { xs: "none", md: "block" },
+            }}
+          />
+        </Box>
+      )}
 
       <HomeBanner
         title="Compare the Cheapest Parcel Delivery Prices*"
@@ -174,7 +178,8 @@ const Home = () => {
               <Card
                 sx={{
                   height: "100%",
-                  backgroundColor: "white",
+                  backgroundColor: theme.palette.background["200"],
+                  color: "white",
                   borderRadius: 3,
                   border: "1px solid #e0e0e0",
                   height: "fit-content",
@@ -226,7 +231,8 @@ const Home = () => {
               <Card
                 sx={{
                   height: "100%",
-                  backgroundColor: "white",
+                  backgroundColor: theme.palette.background["200"],
+                  color: "white",
                   borderRadius: 3,
                   border: "1px solid #e0e0e0",
                   height: "fit-content",
@@ -278,7 +284,8 @@ const Home = () => {
               <Card
                 sx={{
                   height: "100%",
-                  backgroundColor: "white",
+                  backgroundColor: theme.palette.background["200"],
+                  color: "white",
                   borderRadius: 3,
                   border: "1px solid #e0e0e0",
                   height: "fit-content",
@@ -345,7 +352,6 @@ const Home = () => {
                 <Typography
                   sx={{
                     fontWeight: "bold",
-                    color: "#2E5B8A",
                     mb: 4,
                     fontSize: { xs: "2rem", md: "2.5rem" },
                     lineHeight: 1.2,
@@ -366,14 +372,14 @@ const Home = () => {
                   Here at Parcel2Go, we're dedicated to bringing you the{" "}
                   <Box
                     component="span"
-                    sx={{ color: "#2E5B8A", fontWeight: "bold" }}
+                    sx={{ fontWeight: "bold" }}
                   >
                     cheapest parcel delivery in the UK
                   </Box>{" "}
                   and worldwide. Our{" "}
                   <Box
                     component="span"
-                    sx={{ color: "#2E5B8A", fontWeight: "bold" }}
+                    sx={{ fontWeight: "bold" }}
                   >
                     Lowest Price Guarantee
                   </Box>{" "}
@@ -393,21 +399,21 @@ const Home = () => {
                   We work closely with the best{" "}
                   <Box
                     component="span"
-                    sx={{ color: "#2E5B8A", fontWeight: "bold" }}
+                    sx={{ fontWeight: "bold" }}
                   >
                     UK couriers
                   </Box>
                   , including{" "}
                   <Box
                     component="span"
-                    sx={{ color: "#2E5B8A", fontWeight: "bold" }}
+                    sx={{ fontWeight: "bold" }}
                   >
                     Royal Mail, Yodel Direct, Evri
                   </Box>{" "}
                   and{" "}
                   <Box
                     component="span"
-                    sx={{ color: "#2E5B8A", fontWeight: "bold" }}
+                    sx={{ fontWeight: "bold" }}
                   >
                     DPD
                   </Box>
@@ -415,7 +421,7 @@ const Home = () => {
                   high quality service. And with parcel delivery expert,{" "}
                   <Box
                     component="span"
-                    sx={{ color: "#2E5B8A", fontWeight: "bold" }}
+                    sx={{ fontWeight: "bold" }}
                   >
                     Sven Storkofferson
                   </Box>
@@ -434,7 +440,7 @@ const Home = () => {
                   Send a parcel from just £1.99 exc VAT! Get a{" "}
                   <Box
                     component="span"
-                    sx={{ color: "#2E5B8A", fontWeight: "bold" }}
+                    sx={{ color: "text.primary", fontWeight: "bold" }}
                   >
                     quick quote
                   </Box>{" "}
@@ -448,7 +454,7 @@ const Home = () => {
                   variant="h3"
                   sx={{
                     fontWeight: "bold",
-                    color: "#2E5B8A",
+                    color: "text.primary",
                     mb: 3,
                     fontSize: { xs: "2rem", md: "2.5rem" },
                   }}
@@ -470,7 +476,7 @@ const Home = () => {
                   parcel's destination and measurements into our{" "}
                   <Box
                     component="span"
-                    sx={{ color: "#2E5B8A", fontWeight: "bold" }}
+                    sx={{ color: "text.primary", fontWeight: "bold" }}
                   >
                     quick quote tool
                   </Box>
@@ -478,7 +484,7 @@ const Home = () => {
                   reliable{" "}
                   <Box
                     component="span"
-                    sx={{ color: "#2E5B8A", fontWeight: "bold" }}
+                    sx={{ color: "text.primary", fontWeight: "bold" }}
                   >
                     international couriers
                   </Box>
@@ -497,14 +503,14 @@ const Home = () => {
                   Whether you need to send a parcel to{" "}
                   <Box
                     component="span"
-                    sx={{ color: "#2E5B8A", fontWeight: "bold" }}
+                    sx={{ color: "text.primary", fontWeight: "bold" }}
                   >
                     Australia
                   </Box>
                   , the{" "}
                   <Box
                     component="span"
-                    sx={{ color: "#2E5B8A", fontWeight: "bold" }}
+                    sx={{ color: "text.primary", fontWeight: "bold" }}
                   >
                     USA
                   </Box>{" "}
@@ -523,7 +529,7 @@ const Home = () => {
                   Our{" "}
                   <Box
                     component="span"
-                    sx={{ color: "#2E5B8A", fontWeight: "bold" }}
+                    sx={{ color: "text.primary", fontWeight: "bold" }}
                   >
                     International Shipping Hub
                   </Box>{" "}
@@ -584,7 +590,7 @@ const Home = () => {
               sx={{
                 p: { xs: 4, md: 6 },
                 color: "white",
-                background: theme.palette.secondary["100"],
+                background: theme.palette.background["200"],
                 height: "100%",
                 display: "flex",
                 flexDirection: "column",
@@ -681,7 +687,8 @@ const Home = () => {
             borderRadius: 4,
             overflow: "hidden",
             boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
-            backgroundColor: theme.palette.background.lightBlue,
+            backgroundColor: theme.palette.background["200"],
+            color: "white",
             border: "1px solid #E0E3EA",
           }}
         >
@@ -731,7 +738,6 @@ const Home = () => {
               <Typography
                 variant="body1"
                 sx={{
-                  color: "text.secondary",
                   mb: 2,
                   fontSize: "1.05rem",
                 }}
@@ -740,7 +746,6 @@ const Home = () => {
                 <Box
                   component="span"
                   sx={{
-                    color: "#2E5B8A",
                     fontWeight: "bold",
                     textDecoration: "underline",
                     display: "inline",
@@ -752,7 +757,6 @@ const Home = () => {
                 <Box
                   component="span"
                   sx={{
-                    color: "#2E5B8A",
                     fontWeight: "bold",
                     textDecoration: "underline",
                     display: "inline",
@@ -765,7 +769,6 @@ const Home = () => {
               <Typography
                 variant="body1"
                 sx={{
-                  color: "text.secondary",
                   mb: 2,
                   fontSize: "1.05rem",
                 }}
@@ -775,7 +778,6 @@ const Home = () => {
                 <Box
                   component="span"
                   sx={{
-                    color: "#2E5B8A",
                     fontWeight: "bold",
                     textDecoration: "underline",
                     display: "inline",
@@ -788,7 +790,6 @@ const Home = () => {
               <Typography
                 variant="body1"
                 sx={{
-                  color: "text.secondary",
                   fontSize: "1.05rem",
                 }}
               >
@@ -796,7 +797,6 @@ const Home = () => {
                 <Box
                   component="span"
                   sx={{
-                    color: "#2E5B8A",
                     fontWeight: "bold",
                     textDecoration: "underline",
                     display: "inline",

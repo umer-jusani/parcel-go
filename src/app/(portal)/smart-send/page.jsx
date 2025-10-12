@@ -106,7 +106,7 @@ const SmartSend = () => {
             sx={{ mx: "auto", fontWeight: "bold" }}
             size="large"
             variant="contained"
-            color="primary"
+            color="secondary"
           >
             Try Smart Send
           </UIButton>
@@ -119,7 +119,7 @@ const SmartSend = () => {
           <Paper
             elevation={0}
             sx={{
-              backgroundColor: "white",
+              backgroundColor: theme.palette.background["100"],
               borderRadius: 3,
               border: `2px solid #E0E0E0`,
               overflow: "hidden",
@@ -145,15 +145,12 @@ const SmartSend = () => {
                       px: 2,
                       cursor: "pointer",
                       transition: "all 0.2s ease-in-out",
-                      "&:hover": {
-                        backgroundColor: theme.palette.grey[50],
-                      },
                     }}
                   >
                     <Typography
                       variant="h6"
                       sx={{
-                        color: "text.primary",
+                        color: "white",
                         fontWeight: 600,
                         fontSize: "1.1rem",
                       }}
@@ -167,7 +164,7 @@ const SmartSend = () => {
                       flexItem
                       sx={{
                         display: { xs: "none", sm: "block" },
-                        borderColor: theme.palette.grey[300],
+                        borderColor: "white",
                       }}
                     />
                   )}
@@ -178,7 +175,7 @@ const SmartSend = () => {
                         display: { xs: "block", sm: "none" },
                         width: "80%",
                         mx: "auto",
-                        borderColor: theme.palette.grey[300],
+                        borderColor: "white",
                       }}
                     />
                   )}
@@ -186,6 +183,9 @@ const SmartSend = () => {
               ))}
             </Box>
           </Paper>
+
+
+
           {/* Book a Demo Section */}
           <Paper
             elevation={0}
@@ -388,10 +388,10 @@ const SmartSend = () => {
               <Grid item xs={12} md={6}>
                 <Box
                   sx={{
-                    backgroundColor: "#1E3A8A",
+                    backgroundColor: theme.palette.background["100"],
                     height: "100%",
                     p: 4,
-                    color: "white",
+                    // color: "white",
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
@@ -1065,9 +1065,9 @@ const SmartSend = () => {
               variant="h4"
               fontWeight="bold"
               textAlign="center"
+
               sx={{
                 fontSize: { xs: "1.8rem", md: "2.2rem" },
-                color: "#1E3A8A",
                 mb: 4,
               }}
             >
@@ -1126,7 +1126,6 @@ const SmartSend = () => {
                     <Typography
                       variant="subtitle1"
                       fontWeight="bold"
-                      sx={{ color: "#1E3A8A" }}
                     >
                       Multi-channel integration
                     </Typography>
@@ -1171,6 +1170,7 @@ const SmartSend = () => {
                         color: "white",
                         fontSize: "14px",
                         fontWeight: "bold",
+                        color: "white",
                       }}
                     >
                       ✓
@@ -1180,7 +1180,6 @@ const SmartSend = () => {
                     <Typography
                       variant="subtitle1"
                       fontWeight="bold"
-                      sx={{ color: "#1E3A8A" }}
                     >
                       Rule manager
                     </Typography>
@@ -1225,6 +1224,7 @@ const SmartSend = () => {
                         color: "white",
                         fontSize: "14px",
                         fontWeight: "bold",
+                        color: "white",
                       }}
                     >
                       ✓
@@ -1234,7 +1234,7 @@ const SmartSend = () => {
                     <Typography
                       variant="subtitle1"
                       fontWeight="bold"
-                      sx={{ color: "#1E3A8A" }}
+                      color="text.primary"
                     >
                       Mark as dispatched
                     </Typography>
@@ -1275,9 +1275,9 @@ const SmartSend = () => {
                   >
                     <Typography
                       sx={{
-                        color: "white",
                         fontSize: "14px",
                         fontWeight: "bold",
+                        color: "white",
                       }}
                     >
                       ✓
@@ -1287,7 +1287,7 @@ const SmartSend = () => {
                     <Typography
                       variant="subtitle1"
                       fontWeight="bold"
-                      sx={{ color: "#1E3A8A" }}
+                      color="text.primary"
                     >
                       Bulk label creation
                     </Typography>
@@ -1328,9 +1328,9 @@ const SmartSend = () => {
                   >
                     <Typography
                       sx={{
-                        color: "white",
                         fontSize: "14px",
                         fontWeight: "bold",
+                        color: "white",
                       }}
                     >
                       ✓
@@ -1340,7 +1340,7 @@ const SmartSend = () => {
                     <Typography
                       variant="subtitle1"
                       fontWeight="bold"
-                      sx={{ color: "#1E3A8A" }}
+                      color="text.primary"
                     >
                       Picking and packing assistance
                     </Typography>
@@ -1393,7 +1393,7 @@ const SmartSend = () => {
                     <Typography
                       variant="subtitle1"
                       fontWeight="bold"
-                      sx={{ mb: 1, color: "#1E3A8A" }}
+                      sx={{ mb: 1, }}
                     >
                       Returns management
                     </Typography>
@@ -1445,7 +1445,7 @@ const SmartSend = () => {
                     <Typography
                       variant="subtitle1"
                       fontWeight="bold"
-                      sx={{ mb: 1, color: "#1E3A8A" }}
+                      sx={{ mb: 1, }}
                     >
                       Automated payments -
                     </Typography>
@@ -1498,7 +1498,7 @@ const SmartSend = () => {
                     <Typography
                       variant="subtitle1"
                       fontWeight="bold"
-                      sx={{ mb: 1, color: "#1E3A8A" }}
+                      sx={{ mb: 1, }}
                     >
                       Invoice management
                     </Typography>

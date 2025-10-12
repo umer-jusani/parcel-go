@@ -1,13 +1,16 @@
+"use client";
 import Calculator from "@/shared/components/calculator/calculator";
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Stack, Typography, useTheme } from "@mui/material";
 import Image from "next/image";
 
 const HomeBanner = ({ title, description, image }) => {
+  const theme = useTheme();
   return (
     <>
       <Box
         sx={{
-          background: "linear-gradient(135deg, #1976d2 0%, #42a5f5 100%)",
+          background: `linear-gradient(135deg, ${theme.palette.background["200"]} 0%, ${theme.palette.background["200"]} 100%)`,
+          color: "white",
           position: "relative",
           overflow: "hidden",
           pt: 2,
@@ -17,14 +20,18 @@ const HomeBanner = ({ title, description, image }) => {
         <Container maxWidth={"lg"}>
           <Stack
             direction={"row"}
-            alignItems={"center"}
-            justifyContent={"space-between"}
+            alignItems={{ xs: "center", md: "center" }}
+            justifyContent={{ xs: "center", md: "space-between" }}
             spacing={4}
             sx={{ position: "relative", zIndex: 2 }}
           >
             {/* Duck Image */}
             <Box
-              sx={{ flex: 1, display: "flex", justifyContent: "flex-start" }}
+              sx={{
+                flex: 1,
+                display: { xs: "none", md: "flex" },
+                justifyContent: "flex-start",
+              }}
             >
               <Image
                 src={image}
@@ -37,10 +44,13 @@ const HomeBanner = ({ title, description, image }) => {
 
             {/* Title Section */}
             <Stack
-              spacing={2}
+              spacing={{ xs: 1, md: 2 }}
               sx={{
                 color: "white",
                 zIndex: 2,
+                margin: { xs: "0 auto", md: "0" },
+                textAlign: { xs: "center", md: "left" },
+                alignItems: { xs: "center", md: "flex-start" },
               }}
             >
               <Typography
@@ -66,11 +76,11 @@ const HomeBanner = ({ title, description, image }) => {
             </Stack>
 
             {/* Right side spacing */}
-            <Box sx={{ flex: 1 }} />
+            <Box sx={{ flex: 1, display: { xs: "none", md: "block" } }} />
           </Stack>
 
           {/* Calculator - Positioned to overlap the banner */}
-            <Calculator />
+          <Calculator />
         </Container>
 
         {/* Background decorative elements */}

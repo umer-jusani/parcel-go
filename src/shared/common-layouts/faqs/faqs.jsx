@@ -26,7 +26,7 @@ const Faqs = ({ faqa }) => {
 
   return (
     <>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ py: 4 }}>
         <Stack textAlign={"center"} spacing={8} alignItems={"center"}>
           <Typography
             variant="h3"
@@ -34,7 +34,7 @@ const Faqs = ({ faqa }) => {
               fontWeight: "bold",
               mb: 3,
               lineHeight: 1.1,
-              color: "#2E5B8A",
+              color: "text.primary",
             }}
           >
             Frequently Asked Questions
@@ -68,7 +68,7 @@ const Faqs = ({ faqa }) => {
                         variant="h6"
                         sx={{
                           fontWeight: 600,
-                          color: "#2E5B8A",
+                          color: "text.primary",
                           mb: 2,
                           textAlign: "left",
                         }}
@@ -80,7 +80,6 @@ const Faqs = ({ faqa }) => {
                         size="large"
                         callback={() => handleShowAnswer(item)}
                         sx={{
-                          color: "text.primary",
                           fontWeight: 600,
                           fontSize: "1.2rem",
                           border: "none",

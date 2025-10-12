@@ -67,17 +67,17 @@ let theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#038e00',
-      light: '#27ce5a'
+      main: '#250369',
+      light: '#4caf50'
     },
     secondary: {
-      main: '#0254ad',
+      main: 'rgb(28, 129, 31)',
       light: "#ffff",
       dark: "#19547c",
       "100": "#19547c"
     },
     text: {
-      primary: "#15537d",
+      primary: "#250369",
       // light: '#15537d',
       secondary: 'rgba(0, 0, 0, 1)',
       white: 'white',
@@ -95,7 +95,7 @@ let theme = createTheme({
       lightBlue: '#f1f6fe',
       white: 'white',
       footer: '#323c46',
-      "100": '#f0dbe0ff',
+      "100": 'rgba(0, 0, 50, 0.7)',
       "200": '#000032',
     },
     divider: 'rgba(232, 232, 232, 1)',

@@ -77,6 +77,8 @@ import FedexLogo from "./images/Fedexlogo.svg";
 import ParcelForceLogo from "./images/parcelforce.svg";
 import UPSLogo from "./images/UPSLogo.svg";
 import DPDLogo from "./images/dpdLogo.svg";
+import AllCourierOne from "./images/allCourierOne.webp";
+// import AllCourierTwo from "./images/allCourierTwo.webp";
 
 // FedEx inner slider cards
 const FedexInnerCards = [
@@ -121,6 +123,7 @@ const FedexInnerCards = [
 
 export {
   BannerParcelForce,
+  AllCourierOne,
   whySkynet,
   UPSLogo,
   DPDLogo,

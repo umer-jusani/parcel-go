@@ -14,7 +14,7 @@ const NavigationSection = ({ navigationItems = [] }) => {
     <Paper
       elevation={0}
       sx={{
-        backgroundColor: "white",
+        backgroundColor: theme.palette.background["100"],
         borderRadius: 3,
         border: `2px solid #E0E0E0`,
         overflow: "hidden",
@@ -40,9 +40,6 @@ const NavigationSection = ({ navigationItems = [] }) => {
                 px: 2,
                 cursor: "pointer",
                 transition: "all 0.2s ease-in-out",
-                "&:hover": {
-                  backgroundColor: theme.palette.grey[50],
-                },
               }}
             >
               <Typography
