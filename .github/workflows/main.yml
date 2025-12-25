@@ -1,40 +1,31 @@
 name: Next.js Build with Caching & Artifacts
 
-on: 
- push: 
-  branches: [ main ]
+on:
+  push:
+    branches: [ main ]
 
-jobs: 
- build: 
-  runs-on: ubuntu-latest
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-  steps: 
-  # step 1
-  - name: checkout Repos
-    uses: actions/checkout@v4.2.2
-    
-  # step 2
-  - name: Setup Node JS  
-    uses: actions/setup-node@v4.2.0
-    with: 
-     node-version: 20
-     cache: 'npm' 
-     
-  # step 3
-  - name: Install Dependencies
-    run: npm install
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
 
-  # step 4
-  - name: Build Next JS App
-    run: npm run build
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
 
-  # step 5
-  - name: Upload Build on Artifacts
-    uses: actions/upload-artifact@v4
-    with: 
-     name: nextjs-build
-     path: .next/
+      - name: Install Dependencies
+        run: npm install
 
-    
-  
-  
+      - name: Build Next.js App
+        run: npm run build
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nextjs-build
+          path: .next/
